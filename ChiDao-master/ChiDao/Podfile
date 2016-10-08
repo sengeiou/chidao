@@ -1,0 +1,13 @@
+platform :ios  
+pod 'MJExtension'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'GVUserDefaults'
+pod 'MJRefresh'
+pod 'SDCycleScrollView', '~> 1.64'
+pod "BXAutoRollLabel", :git => 'https://github.com/iException/BXAutoRollLabel.git'
+pod 'GTSDK', '1.4.3-noidfa'
+
+platform :ios, '7.0'
+pod 'Masonry'
+pod 'MSAlertController'

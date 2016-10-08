@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  ChiDao
+//
+//  Created by 赵洋 on 16/5/13.
+//  Copyright © 2016年 赵洋. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import "Common.h"
+#import "Tool.h"
+#import "NewsClient.h"
+#import "APPConfig.h"
+#import <Masonry.h>
+#endif
