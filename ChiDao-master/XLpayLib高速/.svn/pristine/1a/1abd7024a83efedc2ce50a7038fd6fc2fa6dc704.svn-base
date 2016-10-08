@@ -1,0 +1,29 @@
+//
+//  iSecurity.h
+//  SA iSecurity Safety Input System for iOS
+//
+//  This file was created by Wang Xuesong on 12-3-8
+//
+//  Copyright 2012年,2013年 北京银盾思创网络技术有限公司. All rights reserved.
+//
+
+#ifndef I_SECURITY_H
+#define I_SECURITY_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#import <Foundation/Foundation.h>
+#import "PasswordTextField.h"
+#import "iSecurityTypes.h"
+#import "PasswordKeyboardDelegate.h"
+#import "VXPasswordKeyboardDelegate.h"
+
+void iSecurityInitialize(void);
+    
+#ifdef __cplusplus
+}
+#endif
+
+#endif

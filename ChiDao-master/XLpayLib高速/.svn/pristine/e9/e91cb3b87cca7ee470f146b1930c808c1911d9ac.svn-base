@@ -1,0 +1,235 @@
+//
+//  IPosServer.h
+//  IPos
+//
+//  Created by hisuntech on 11-8-1.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import <CFNetwork/CFNetwork.h>
+
+@interface HisuntechBuildJsonString : NSObject {
+     CFTimeInterval  lastFrameStartTime;
+}
+
+
+@property (nonatomic,retain)NSString *publicKey;
+@property (nonatomic,retain)NSMutableDictionary *dict;
+@property (assign)long  sequence;
+@property (nonatomic,retain)NSString *orderString;
+@property (nonatomic,retain)NSString *serialNumber;
+
+
+
++(HisuntechBuildJsonString *)Instance;
+//key value封装成字典
++(NSDictionary *)buildMessage:(NSArray *)Key value:(NSArray *)Value;
+//获取公钥
++(NSDictionary *)getPublicKeyJsonString;
+//获取随机因子
++(NSDictionary *)getRandomKeyJsonString;
+//绑定银行卡发送短信验证码 030
++(NSDictionary *)getSendPhoneCodeJsonString:(NSString*)phoneNum//手机号
+                                   userType:(NSString*)userType;//类别-2
+//绑定银行卡校验短信验证码
++(NSDictionary *)getCheckPhoneCodeJsonString:(NSString*)phoneNum//手机号
+                                     smsCode:(NSString*)smsCode;//短信验证码
+//查询代金券
++(NSDictionary *)getVoucherMsgJsonString:(NSString*)userNo//内部用户号
+                                   merNo:(NSString*)merNo//商户号
+                                orderAmt:(NSString*)orderAmt//订单金额
+                                mService:(NSString*)mService;//业务类型
+//查询红包
++(NSDictionary *)getRedPacketMsgJsonString:(NSString*)userNo//内部用户号
+                                     merNo:(NSString*)merNo//商户号
+                                  orderAmt:(NSString*)orderAmt//订单金额
+                                  mService:(NSString*)mService;//业务类型
+//账户支付
++(NSDictionary *)getAccountPayJsonString:(NSString*)userId//手机号
+                                  userNo:(NSString*)userNo//内部用户号
+                                regEmail:(NSString*)regEmail//邮箱号
+                                 payType:(NSString*)payType//付款类型
+                                 sdkCert:(NSString*)sdkCert//证书公钥
+                                 signStr:(NSString*)signStr//签名值
+                                 charSet:(NSString*)charSet//字符集
+                                 reqData:(NSString*)reqData//接口请求数据
+                                 reqCert:(NSString*)reqCert//商户证书公钥
+                                signData:(NSString*)signData//商户签名值
+                                signType:(NSString*)signType//签名方式
+                                  bonStr:(NSString*)bonStr//使用红包拼接字符串
+                               bonTotAmt:(NSString*)bonTotAmt//红包使用金额
+                                  vchStr:(NSString*)vchStr//使用代金券拼接字符串
+                               vchTotAmt:(NSString*)vchTotAmt//代金券使用金额
+                               payAmtStr:(NSString*)payAmtStr//支付总金额
+                             prdProperty:(NSString*)prdProperty;
+//账户捡起订单支付
++(NSDictionary *)getPickOrderAccountPayJsonString:(NSString*)userId//手机号
+                                           userNo:(NSString*)userNo//内部用户号
+                                         regEmail:(NSString*)regEmail//邮箱号
+                                            credt:(NSString*)credt//订单建立日期
+                                            ordNo:(NSString*)ordNo//内部订单号
+                                         merOrdNo:(NSString*)merOrdNo//商户订单号
+                                           bonStr:(NSString*)bonStr//使用红包拼接字符串
+                                        bonTotAmt:(NSString*)bonTotAmt//红包使用金额
+                                           vchStr:(NSString*)vchStr//使用代金券拼接字符串
+                                        vchTotAmt:(NSString*)vchTotAmt//代金券使用金额
+                                        payAmtStr:(NSString*)payAmtStr;//支付总金额
+//登录
++(NSDictionary *)getLoginJsonString:(NSString*)userId//手机号
+                              email:(NSString*)regEmail//邮箱号
+                                psw:(NSString*)psw;//登录密码
+//查询绑定的银行卡
++(NSDictionary *)getBindBankMsgJsonString:(NSString*)userId//手机号
+                                   userNo:(NSString*)userNo//内部用户号
+                                 regEmail:(NSString*)regEmail;//邮箱号
+//快捷卡支付
++(NSDictionary *)getQuickCardPayJsonString:(NSString*)userId//手机号
+                                    userNo:(NSString*)userNo//内部用户号
+                                  regEmail:(NSString*)regEmail//邮箱号
+                                    bonStr:(NSString*)bonStr//使用红包拼接字符串
+                                 bonTotAmt:(NSString*)bonTotAmt//红包使用金额
+                                    vchStr:(NSString*)vchStr//使用代金券拼接字符串
+                                 vchTotAmt:(NSString*)vchTotAmt//代金券使用金额
+                                   charSet:(NSString*)charSet//字符集
+                                   reqData:(NSString*)reqData//接口请求数据
+                                   reqCert:(NSString*)reqCert//商户证书公钥
+                                  signData:(NSString*)signData//商户签名值
+                                  signType:(NSString*)signType//签名方式
+                                    payAmt:(NSString*)payAmt//支付总金额
+                                  payTotal:(NSString*)payTotal//快捷支付总金额
+                                accountAmt:(NSString*)accountAmt//账户支付总金额
+                                       pwd:(NSString*)pwd//支付密码
+                                    bankNo:(NSString*)bankNo//银行简称
+                                      cvn2:(NSString*)cvn2//cvn2
+                                   bankNum:(NSString*)bankNum//银行卡号
+                                      date:(NSString*)date//有效期
+                                  phoneNum:(NSString*)phoneNum//银行预留手机号
+                                    crdTyp:(NSString*)crdTyp//绑定卡类型
+                                      name:(NSString*)name//持卡人姓名
+                                     IDnum:(NSString*)IDnum//持卡人身份证号
+                                     AgrNo:(NSString*)AgrNo;
+//检查支付密码
++(NSDictionary *)getCheckPayPwdJsonString:(NSString*)userId//手机号
+                                   userNo:(NSString*)userNo//内部用户号
+                                 regEmail:(NSString*)regEmail//邮箱号
+                                      pwd:(NSString*)pwd;//支付密码
+//快捷充值
++(NSDictionary *)getQuickCardRechargeJsonString:(NSString*)userId//手机号
+                                         userNo:(NSString*)userNo//内部用户号
+                                       regEmail:(NSString*)regEmail//邮箱号
+                                            pwd:(NSString*)pwd//支付密码
+                                         bankNo:(NSString*)bankNo//银行简称
+                                        bankNum:(NSString*)bankNum//银行卡号
+                                       phoneNum:(NSString*)phoneNum//银行预留手机号
+                                           name:(NSString*)name//持卡人姓名
+                                          IDnum:(NSString*)IDnum//持卡人身份证号
+                                    rechargeAmt:(NSString*)rechargeAmt;//快捷充值金额
+//快捷捡起订单支付
++(NSDictionary *)getPickOrderQuickCardPayJsonString:(NSString*)userId//手机号
+                                             userNo:(NSString*)userNo//内部用户号
+                                           regEmail:(NSString*)regEmail//邮箱号
+                                             bonStr:(NSString*)bonStr//使用红包拼接字符串
+                                          bonTotAmt:(NSString*)bonTotAmt//红包使用金额
+                                             vchStr:(NSString*)vchStr//使用代金券拼接字符串
+                                          vchTotAmt:(NSString*)vchTotAmt//代金券使用金额
+                                           orderAmt:(NSString*)orderAmt//订单金额
+                                              credt:(NSString*)credt//订单建立日期
+                                            orderNo:(NSString*)orderNo//内部订单号
+                                         merOrderNo:(NSString*)merOrderNo//商户订单号
+                                             payAmt:(NSString*)payAmt//支付总金额
+                                           payTotal:(NSString*)payTotal//快捷支付总金额
+                                         accountAmt:(NSString*)accountAmt//账户支付总金额
+                                                pwd:(NSString*)pwd//支付密码
+                                             bankNo:(NSString*)bankNo//银行简称
+                                               cvn2:(NSString*)cvn2//cvn2
+                                            bankNum:(NSString*)bankNum//银行卡号
+                                               date:(NSString*)date//有效期
+                                           phoneNum:(NSString*)phoneNum//银行预留手机号
+                                             crdTyp:(NSString*)crdTyp//绑定卡类型
+                                               name:(NSString*)name//持卡人姓名
+                                              IDnum:(NSString*)IDnum
+                                              AgrNo:(NSString*)AgrNo;//持卡人身份证号
+//更新账户信息
++(NSDictionary *)getUpdateAccountMsgJsonString:(NSString*)userId//手机号
+                                        userNo:(NSString*)userNo//内部用户号
+                                      regEmail:(NSString*)regEmail;//邮箱号
+
+//商城订单支付金额信息
++(NSDictionary *)getOrderMoneyJsonString:(NSString *)userNo//内部用户号
+                              merOrderNo:(NSString *)merOrderNo//商户订单号
+                              orderMoney:(NSString *)orderMoney;//订单金额
+
+//商城订单支付金额信息
++(NSDictionary *)getOrderMoneyJsonString:(NSString *)userNo//内部用户号
+                              merOrderNo:(NSString *)merOrderNo//商户订单号
+                              orderMoney:(NSString *)orderMoney;//订单金额
+// 验证支付密码  codeType = 57
++(NSDictionary *)checkPayPasswordWithUserid:(NSString *)userId
+                                     userno:(NSString *)userNo
+                                     payPwd:(NSString *)payPwd
+                                   regEmail:(NSString *)regEmail;
++(NSDictionary *)addBankCardWithUserNO:(NSString *)userNo
+                                bankNo:(NSString *)bankNo
+                            bankcardNo:(NSString *)bankcardNo
+                              bnkPhone:(NSString *)bnkPhone
+                              cardType:(NSString *)cardType
+                                 chkNO:(NSString *)chkNO
+                        cardHolderName:(NSString *)cardHolderName
+                                 IDnum:(NSString *)idNum
+                              userType:(NSString *)userType
+                              crdexpDt:(NSString *)crdexpDt
+                                  cvn2:(NSString *)cvn2;
+/**
+ *  注册  检查验证码
+ */
++ (NSDictionary *)getRegisterPhoneCodeJsonString:(NSString *)phoneNum userType:(NSString *)userType smsCode:(NSString *)smsCode;
+//注册 APP_CODE_UserRegister @"OAPPMCA1/APP4080020" 35
++(NSDictionary *)getRegisterJsonString:(NSString*)userId//手机号
+                              regEmail:(NSString*)regEmail//邮箱号
+                              loginPwd:(NSString*)loginPwd//
+                                payPwd:(NSString*)payPwd
+                                pswQue:(NSString*)pswQue
+                                pswAns:(NSString*)pswAns
+                               smsCode:(NSString*)smsCode
+                                idName:(NSString *)idName
+                             idCardNum:(NSString *)cardNum;
+/**
+ * OAPPMCA1/APP-fno-objc-arc4080040-修改密码校验验证码-codeType 5 -APP_CODE_CheckSmsCode
+ */
++(NSDictionary *)getCheckPhoneCodeJsonString:(NSString *)phoneNum
+                                    userType:(NSString *)userType
+                                     smsCode:(NSString *)smsCode;
+
+//重置登录密码 OAPPMCA1/APP4080050--22--APP_CODE_ResetLoginPwd
++(NSDictionary *)getResetLoginPwdMsgJsonString:(NSString*)userId//手机号
+                                      regEmail:(NSString*)regEmail//邮箱号
+                                   novLoginPwd:(NSString*)novLoginPwd;
+
+//银联支付@"charset",@"req_data",@"req_cert",@"req_sign",@"sign_type"
++(NSDictionary *)getBankPayWithCharset:(NSString *)charset
+                              req_data:(NSString *)req_data
+                              req_cert:(NSString *)req_cert
+                              req_sign:(NSString *)req_sign
+                             sign_type:(NSString *)sign_type;
+
+//找回支付密码的 相关的网络请求
+
+//查询安全问题 OAPPMCA1/APP4080080--24--APP_CODE_QuerySafeQuestion
++(NSDictionary *)getPayQuestionMsgJsonString:(NSString*)userId//手机号
+                                      userNo:(NSString*)userNo//内部用户号
+                                    regEmail:(NSString*)regEmail;
+
+//重置支付密码 OAPPMCA1/APP4080090--23--APP_CODE_ResetPayPwd
++(NSDictionary *)getResetPayPwdMsgJsonString:(NSString*)userId//手机号
+                                      userNo:(NSString*)userNo//内部用户号
+                                    question:(NSString*)question//安全问题
+                                      answer:(NSString*)answer//问题答案
+                                   novPayPwd:(NSString*)novPayPwd;
+//重置 登录密码 上传身份证和 密保的接口
++(NSDictionary *)findPWDWithPhoneNum:(NSString *)phone withOPR_TYP:(NSString *)oprTyp withCHW_QUES1:(NSString *)question withCHW_ANS1:(NSString *)ans;
+
+//身份证
++(NSDictionary *)findPWDWithPhoneNum:(NSString *)phone withOPR_TYP:(NSString *)oprTyp withIDCard:(NSString *)card;
+
+
+@end

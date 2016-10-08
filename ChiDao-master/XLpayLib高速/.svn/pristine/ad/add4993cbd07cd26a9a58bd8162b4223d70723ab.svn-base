@@ -1,0 +1,16 @@
+//
+//  PasswordTextField+VIP.h
+//  SA iSecurity Safety Input System for iOS
+//
+//  This file was created by Wang Xuesong on 14-1-12
+//
+//  Copyright 2012年,2013年,2014年 北京银盾思创网络技术有限公司. All rights reserved.
+//
+
+#import "PasswordTextField.h"
+
+@interface PasswordTextField (VIP)
+
+- (NSString*)getValueWithTimeStamp:(NSString*)timestamp withSalt:(NSString*)salt usingFullMD5Value:(BOOL)flag;
+
+@end

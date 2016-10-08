@@ -1,0 +1,170 @@
+//
+//  BaseViewController.m
+//  Demo_1
+//
+//  Created by allen on 14-9-18.
+//  Copyright (c) 2014年 itazk. All rights reserved.
+//
+
+#import "HisuntechBaseViewController.h"
+#import "HisuntechAFNetworking.h"
+#import "HisuntechLoadingView.h"
+#import "HisuntechUIColor+YUColor.h"
+
+static HisuntechBaseViewController *instance = nil;
+@interface HisuntechBaseViewController ()
+@end
+@implementation HisuntechBaseViewController
+@synthesize contentView;
+@synthesize backView;
+@synthesize resultStr;
+@synthesize codeType;
++(HisuntechBaseViewController *)Instance{
+	@synchronized(self){
+		if (instance == nil) {
+			instance = [[self alloc] init];
+		}
+	}
+	return instance;
+}
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        self.resultStr = [[NSDictionary alloc] init];
+    }
+    return self;
+}
+-(void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:235/255.0 green:241/255.0 blue:245/255.0 alpha:1];
+     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
+
+    
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+-(void)dealloc{
+}
+
+/**
+ *  请求失败
+ */
+-(void)resquestFail:(id)response{
+    
+    if ([self.HBdelegate respondsToSelector:@selector(resquestFail:)]) {
+        [self.HBdelegate resquestFail:response];
+    }
+}
+/**
+ *  请求成功
+ */
+-(void)resquestSuccess:(id)response{
+    
+//    NSDictionary* respDiction = (NSDictionary*)response;
+////    NSLog(@"resquestSuccess  JSON: %@", [respDiction description]);
+//    NSString * strResponse = (NSString*)response;
+//   NSData * dataResponse = [strResponse dataUsingEncoding:NSUTF8StringEncoding];
+    if ([self.HBdelegate respondsToSelector:@selector(resquestSuccess:)]) {
+        [self.HBdelegate resquestSuccess:response];
+    }
+    
+}
+#define WEB_DOME @"http://123.129.210.53:8880"
+/**
+ *  请求接口
+ *
+ *  @param parameters1 上行参数
+ *  @param reqType     /服务/接口
+ */
+
+-(void)requestServer:(NSDictionary*)parameters requestType:(NSString*)reqType codeType:(int)codeType{
+    self.codeType = codeType;
+    NSString *baseUrl = @"http://123.129.210.53:8880/mca/%@.dom";
+    NSString* BaseURLString = [NSString stringWithFormat:baseUrl,reqType];
+    NSLog(@"地址：%@",BaseURLString);
+    NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+    [[HisuntechLoadingView shareLoadingView] show];//显示加载框
+    HisuntechAFHTTPSessionManager *manager = [[HisuntechAFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+    //设置编码方式
+    
+    manager.requestSerializer.stringEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    manager.responseSerializer = [HisuntechAFJSONResponseSerializer serializer];
+    manager.securityPolicy.allowInvalidCertificates = YES;//https网络请求能过 需要设置的属性
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObject:@"text/html"];
+    [manager POST:BaseURLString parameters:parameters
+          success:^(NSURLSessionDataTask *task, id responseObject) {
+              [[HisuntechLoadingView shareLoadingView] close];//关闭加载框
+              [self resquestSuccess:responseObject];
+          } failure:^(NSURLSessionDataTask *task, NSError *error) {
+              [[HisuntechLoadingView shareLoadingView] close];//关闭加载框
+              [self resquestFail:error];
+          }];
+}
+/**
+ *  请求接口
+ *
+ *  @param parameters1 上行参数
+ *  @param reqType     /服务/接口
+ */
+- (void)requestServer:(NSDictionary *)parameters requestType:(NSString *)reqType successSel:(SEL)success failureSel:(SEL)failure
+{
+    self.codeType = codeType;
+    NSString* baseUrl = [NSString stringWithFormat:@"http://123.129.210.53:8880/mca/%@.dom",reqType];
+    NSString* BaseURLString = baseUrl;
+    NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+    [[HisuntechLoadingView shareLoadingView] show];//显示加载框
+    HisuntechAFHTTPSessionManager *manager = [[HisuntechAFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+    manager.responseSerializer = [HisuntechAFJSONResponseSerializer serializer];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObject:@"text/html"];
+    manager.requestSerializer.stringEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    manager.requestSerializer.stringEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    [manager POST:BaseURLString parameters:parameters
+          success:^(NSURLSessionDataTask *task, id responseObject) {
+              [[HisuntechLoadingView shareLoadingView] close];//关闭加载框
+              if ([self respondsToSelector:success]) {
+                  [self performSelector:success withObject:responseObject];
+              }
+          } failure:^(NSURLSessionDataTask *task, NSError *error) {
+              [[HisuntechLoadingView shareLoadingView] close];//关闭加载框
+              if ([self respondsToSelector:failure]) {
+                  [self performSelector:failure withObject:error];
+              }
+          }];
+}
+
+/**
+ *  dialog提示框
+ *
+ *  @param toastMsg 提示内容
+ */
+-(void)toastResult:(NSString *) toastMsg{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:toastMsg message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)setLeftItemToBack
+{
+    self.navigationItem.hidesBackButton = YES;
+    NSString * imagePath = ResourcePath(@"Back_btn.png") ;
+    UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageWithContentsOfFile:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleBordered target:self     action:@selector(backPop)];
+    self.navigationItem.leftBarButtonItem = back;
+}
+
+- (void)backPop
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+@end

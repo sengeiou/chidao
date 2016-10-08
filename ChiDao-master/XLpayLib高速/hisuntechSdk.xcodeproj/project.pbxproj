@@ -1,0 +1,1441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		065C9A211B8FE64800EA83AF /* payPasswordReslutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 065C9A1F1B8FE64800EA83AF /* payPasswordReslutViewController.h */; };
+		065C9A221B8FE64800EA83AF /* payPasswordReslutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C9A201B8FE64800EA83AF /* payPasswordReslutViewController.m */; };
+		067F66011B6088D00022D89E /* retrievePayPwdController.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F65FF1B6088D00022D89E /* retrievePayPwdController.h */; };
+		067F66021B6088D00022D89E /* retrievePayPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F66001B6088D00022D89E /* retrievePayPwdController.m */; };
+		067F66051B60CDC90022D89E /* validatePhoneController.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F66031B60CDC90022D89E /* validatePhoneController.h */; };
+		067F66061B60CDC90022D89E /* validatePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F66041B60CDC90022D89E /* validatePhoneController.m */; };
+		067F660A1B60D4BA0022D89E /* captchaController.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F66081B60D4BA0022D89E /* captchaController.h */; };
+		067F660B1B60D4BA0022D89E /* captchaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F66091B60D4BA0022D89E /* captchaController.m */; };
+		067F660E1B60D8DD0022D89E /* GetPayPasswordViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F660C1B60D8DD0022D89E /* GetPayPasswordViewController.h */; };
+		067F660F1B60D8DD0022D89E /* GetPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F660D1B60D8DD0022D89E /* GetPayPasswordViewController.m */; };
+		067F66121B60D92B0022D89E /* resetPasswordController.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F66101B60D92B0022D89E /* resetPasswordController.h */; };
+		067F66131B60D92B0022D89E /* resetPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F66111B60D92B0022D89E /* resetPasswordController.m */; };
+		0680D2141BAA9940009B89DA /* HisuntechMixPayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA6DFCD1A24670400A25034 /* HisuntechMixPayViewController.h */; };
+		06A1C96C1B69CDBE00883987 /* IDViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A1C96A1B69CDBE00883987 /* IDViewController.h */; };
+		06A1C96D1B69CDBE00883987 /* IDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A1C96B1B69CDBE00883987 /* IDViewController.m */; };
+		06A1C9721B6A103500883987 /* QuestionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A1C9701B6A103500883987 /* QuestionViewController.h */; };
+		06A1C9731B6A103500883987 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A1C9711B6A103500883987 /* QuestionViewController.m */; };
+		06A401BE1B5DF77E00612CDB /* PayProtocolViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A401BC1B5DF77E00612CDB /* PayProtocolViewController.h */; };
+		06A401BF1B5DF77E00612CDB /* PayProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A401BD1B5DF77E00612CDB /* PayProtocolViewController.m */; };
+		06F8EB1F1B3045A400D384DE /* bg_checkbox_yinlian.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8EB1E1B3045A400D384DE /* bg_checkbox_yinlian.png */; };
+		0BD1364E1B27E64A0093D196 /* HisuntechBankPayViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD1364C1B27E64A0093D196 /* HisuntechBankPayViewCell.h */; };
+		0BD1364F1B27E64A0093D196 /* HisuntechBankPayViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1364D1B27E64A0093D196 /* HisuntechBankPayViewCell.m */; };
+		1AA3FA671D389E670056E52F /* HisuntechIQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3F9F21D389E670056E52F /* HisuntechIQKeyboardManager.bundle */; };
+		1AA3FA681D389E670056E52F /* HisuntechIQKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9F31D389E670056E52F /* HisuntechIQKeyboardManager.h */; };
+		1AA3FA691D389E670056E52F /* HisuntechIQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F9F41D389E670056E52F /* HisuntechIQKeyboardManager.m */; };
+		1AA3FA6A1D389E670056E52F /* HisuntechIQKeyboardManagerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9F51D389E670056E52F /* HisuntechIQKeyboardManagerConstants.h */; };
+		1AA3FA6B1D389E670056E52F /* HisuntechIQKeyboardManagerConstantsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9F61D389E670056E52F /* HisuntechIQKeyboardManagerConstantsInternal.h */; };
+		1AA3FA6C1D389E670056E52F /* HisuntechIQSegmentedNextPrevious.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9F71D389E670056E52F /* HisuntechIQSegmentedNextPrevious.h */; };
+		1AA3FA6D1D389E670056E52F /* HisuntechIQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F9F81D389E670056E52F /* HisuntechIQSegmentedNextPrevious.m */; };
+		1AA3FA6E1D389E670056E52F /* HisuntechIQTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9F91D389E670056E52F /* HisuntechIQTextView.h */; };
+		1AA3FA6F1D389E670056E52F /* HisuntechIQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F9FA1D389E670056E52F /* HisuntechIQTextView.m */; };
+		1AA3FA701D389E670056E52F /* HisuntechIQTitleBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9FB1D389E670056E52F /* HisuntechIQTitleBarButtonItem.h */; };
+		1AA3FA711D389E670056E52F /* HisuntechIQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F9FC1D389E670056E52F /* HisuntechIQTitleBarButtonItem.m */; };
+		1AA3FA721D389E670056E52F /* HisuntechIQToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9FD1D389E670056E52F /* HisuntechIQToolbar.h */; };
+		1AA3FA731D389E670056E52F /* HisuntechIQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F9FE1D389E670056E52F /* HisuntechIQToolbar.m */; };
+		1AA3FA741D389E670056E52F /* HisuntechKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3F9FF1D389E670056E52F /* HisuntechKeyboardManager.h */; };
+		1AA3FA751D389E670056E52F /* HisuntechNSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA001D389E670056E52F /* HisuntechNSArray+Sort.h */; };
+		1AA3FA761D389E670056E52F /* HisuntechNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA011D389E670056E52F /* HisuntechNSArray+Sort.m */; };
+		1AA3FA771D389E670056E52F /* HisuntechUIView+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA021D389E670056E52F /* HisuntechUIView+Hierarchy.h */; };
+		1AA3FA781D389E670056E52F /* HisuntechUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA031D389E670056E52F /* HisuntechUIView+Hierarchy.m */; };
+		1AA3FA791D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA041D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.h */; };
+		1AA3FA7A1D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA051D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.m */; };
+		1AA3FA7B1D389E670056E52F /* HisuntechUIWindow+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA061D389E670056E52F /* HisuntechUIWindow+Hierarchy.h */; };
+		1AA3FA7C1D389E670056E52F /* HisuntechUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA071D389E670056E52F /* HisuntechUIWindow+Hierarchy.m */; };
+		1AA3FA7F1D389E670056E52F /* HisuntechColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA0C1D389E670056E52F /* HisuntechColor.h */; };
+		1AA3FA801D389E670056E52F /* HisuntechColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA0D1D389E670056E52F /* HisuntechColor.m */; };
+		1AA3FA811D389E670056E52F /* HisuntechUIColor+YUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA0E1D389E670056E52F /* HisuntechUIColor+YUColor.h */; };
+		1AA3FA821D389E670056E52F /* HisuntechUIColor+YUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA0F1D389E670056E52F /* HisuntechUIColor+YUColor.m */; };
+		1AA3FA831D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA111D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.h */; };
+		1AA3FA841D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA121D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.m */; };
+		1AA3FA851D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA131D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.h */; };
+		1AA3FA861D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA141D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.m */; };
+		1AA3FA871D389E670056E52F /* HisuntechUIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA151D389E670056E52F /* HisuntechUIAlertView+AFNetworking.h */; };
+		1AA3FA881D389E670056E52F /* HisuntechUIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA161D389E670056E52F /* HisuntechUIAlertView+AFNetworking.m */; };
+		1AA3FA891D389E670056E52F /* HisuntechUIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA171D389E670056E52F /* HisuntechUIButton+AFNetworking.h */; };
+		1AA3FA8A1D389E670056E52F /* HisuntechUIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA181D389E670056E52F /* HisuntechUIButton+AFNetworking.m */; };
+		1AA3FA8B1D389E670056E52F /* HisuntechUIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA191D389E670056E52F /* HisuntechUIImageView+AFNetworking.h */; };
+		1AA3FA8C1D389E670056E52F /* HisuntechUIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA1A1D389E670056E52F /* HisuntechUIImageView+AFNetworking.m */; };
+		1AA3FA8D1D389E670056E52F /* HisuntechUIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA1B1D389E670056E52F /* HisuntechUIKit+AFNetworking.h */; };
+		1AA3FA8E1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA1C1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.h */; };
+		1AA3FA8F1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA1D1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.m */; };
+		1AA3FA901D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA1E1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.h */; };
+		1AA3FA911D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA1F1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.m */; };
+		1AA3FA921D389E670056E52F /* HisuntechUIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA201D389E670056E52F /* HisuntechUIWebView+AFNetworking.h */; };
+		1AA3FA931D389E670056E52F /* HisuntechUIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FA211D389E670056E52F /* HisuntechUIWebView+AFNetworking.m */; };
+		1AA3FABF1D389E670056E52F /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA3FA511D389E670056E52F /* libUPPayPlugin.a */; };
+		1AA3FAC01D389E670056E52F /* UPPayPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA521D389E670056E52F /* UPPayPlugin.h */; };
+		1AA3FAC11D389E670056E52F /* UPPayPluginDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FA531D389E670056E52F /* UPPayPluginDelegate.h */; };
+		1AA3FAFD1D389F510056E52F /* EditTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAEB1D389F510056E52F /* EditTextField.h */; };
+		1AA3FAFE1D389F510056E52F /* iProtect.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAEC1D389F510056E52F /* iProtect.h */; };
+		1AA3FAFF1D389F510056E52F /* iProtectTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAED1D389F510056E52F /* iProtectTypes.h */; };
+		1AA3FB001D389F510056E52F /* PasswordKeyboardDelegate+VIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAEE1D389F510056E52F /* PasswordKeyboardDelegate+VIP.h */; };
+		1AA3FB011D389F510056E52F /* PasswordKeyboardDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAEF1D389F510056E52F /* PasswordKeyboardDelegate.h */; };
+		1AA3FB021D389F510056E52F /* PasswordTextField+VIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF01D389F510056E52F /* PasswordTextField+VIP.h */; };
+		1AA3FB031D389F510056E52F /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF11D389F510056E52F /* PasswordTextField.h */; };
+		1AA3FB041D389F510056E52F /* VXPasswordKeyboardDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF21D389F510056E52F /* VXPasswordKeyboardDelegate.h */; };
+		1AA3FB051D389F510056E52F /* WebPasswordKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF31D389F510056E52F /* WebPasswordKeyboard.h */; };
+		1AA3FB061D389F510056E52F /* WebPasswordKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF41D389F510056E52F /* WebPasswordKeyboardController.h */; };
+		1AA3FB071D389F510056E52F /* WebPasswordKeyboardDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FAF51D389F510056E52F /* WebPasswordKeyboardDelegate.h */; };
+		1AA3FB0A1D389F510056E52F /* SDHS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3FAFC1D389F510056E52F /* SDHS.xcconfig */; };
+		1AA3FB981D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB721D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.h */; };
+		1AA3FB991D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB731D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.m */; };
+		1AA3FB9A1D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB741D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.h */; };
+		1AA3FB9B1D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB751D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.m */; };
+		1AA3FB9C1D38A92D0056E52F /* HisuntechAFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB761D38A92D0056E52F /* HisuntechAFHTTPSessionManager.h */; };
+		1AA3FB9D1D38A92D0056E52F /* HisuntechAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB771D38A92D0056E52F /* HisuntechAFHTTPSessionManager.m */; };
+		1AA3FB9E1D38A92D0056E52F /* HisuntechAFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB781D38A92D0056E52F /* HisuntechAFNetworking.h */; };
+		1AA3FB9F1D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB791D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.h */; };
+		1AA3FBA01D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB7A1D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.m */; };
+		1AA3FBA11D38A92D0056E52F /* HisuntechAFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB7B1D38A92D0056E52F /* HisuntechAFSecurityPolicy.h */; };
+		1AA3FBA21D38A92D0056E52F /* HisuntechAFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB7C1D38A92D0056E52F /* HisuntechAFSecurityPolicy.m */; };
+		1AA3FBA31D38A92D0056E52F /* HisuntechAFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB7D1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.h */; };
+		1AA3FBA41D38A92D0056E52F /* HisuntechAFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB7E1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.m */; };
+		1AA3FBA51D38A92D0056E52F /* HisuntechAFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB7F1D38A92D0056E52F /* HisuntechAFURLRequestSerialization.h */; };
+		1AA3FBA61D38A92D0056E52F /* HisuntechAFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB801D38A92D0056E52F /* HisuntechAFURLRequestSerialization.m */; };
+		1AA3FBA71D38A92D0056E52F /* HisuntechAFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB811D38A92D0056E52F /* HisuntechAFURLResponseSerialization.h */; };
+		1AA3FBA81D38A92D0056E52F /* HisuntechAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB821D38A92D0056E52F /* HisuntechAFURLResponseSerialization.m */; };
+		1AA3FBA91D38A92D0056E52F /* HisuntechAFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA3FB831D38A92D0056E52F /* HisuntechAFURLSessionManager.h */; };
+		1AA3FBAA1D38A92D0056E52F /* HisuntechAFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3FB841D38A92D0056E52F /* HisuntechAFURLSessionManager.m */; };
+		1ABE654B1D4C97DD00D2C278 /* HisuntechReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABE65491D4C97DD00D2C278 /* HisuntechReachability.h */; };
+		1ABE654C1D4C97DD00D2C278 /* HisuntechReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE654A1D4C97DD00D2C278 /* HisuntechReachability.m */; };
+		9F47D4B81A25D13000D7A747 /* HisuntechForgetPasswordResetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4B21A25D13000D7A747 /* HisuntechForgetPasswordResetingController.m */; };
+		9F47D4BA1A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4B41A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.m */; };
+		9F47D4BC1A25D13000D7A747 /* HisuntechForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4B61A25D13000D7A747 /* HisuntechForgetPasswordViewController.m */; };
+		9F47D4D71A25D14100D7A747 /* HisuntechTableViewWithBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4C41A25D14100D7A747 /* HisuntechTableViewWithBlock.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F47D4D91A25D14100D7A747 /* UITableView+DataSourceBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4C61A25D14100D7A747 /* UITableView+DataSourceBlocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F47D4DB1A25D14100D7A747 /* UITableView+DelegateBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4C81A25D14100D7A747 /* UITableView+DelegateBlocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F47D4DD1A25D14100D7A747 /* HisuntechIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4CA1A25D14100D7A747 /* HisuntechIdCardViewController.m */; };
+		9F47D4DF1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4CC1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.m */; };
+		9F47D4E11A25D14100D7A747 /* HisuntechRegisterVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4CE1A25D14100D7A747 /* HisuntechRegisterVerifyViewController.m */; };
+		9F47D4E31A25D14100D7A747 /* HisuntechRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4D01A25D14100D7A747 /* HisuntechRegisterViewController.m */; };
+		9F47D4E51A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4D21A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.m */; };
+		9F47D4EB1A25D17A00D7A747 /* HisuntechNormalTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4E71A25D17A00D7A747 /* HisuntechNormalTextField.m */; };
+		9F47D4ED1A25D17A00D7A747 /* HisuntechPooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F47D4E91A25D17A00D7A747 /* HisuntechPooCodeView.m */; };
+		9F4A1EBF1A26D65700FD34B1 /* HisuntechPaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA6E0551A246E3B00A25034 /* HisuntechPaySDK.h */; };
+		9F4A1EC01A26D6A600FD34B1 /* HisuntechBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA6E0471A24677300A25034 /* HisuntechBaseViewController.h */; };
+		9F4A1EC11A26D6B700FD34B1 /* HisuntechLoginController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA6E0491A24677300A25034 /* HisuntechLoginController.h */; };
+		9FA6DF741A2464D000A25034 /* HisuntechCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF731A2464D000A25034 /* HisuntechCustomAlertView.m */; };
+		9FA6DF861A2464F700A25034 /* HisuntechAccountPayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF851A2464F700A25034 /* HisuntechAccountPayController.m */; };
+		9FA6DF8C1A24652E00A25034 /* HisuntechPayFailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF891A24652E00A25034 /* HisuntechPayFailedViewController.m */; };
+		9FA6DF8D1A24652E00A25034 /* HisuntechPaySucceedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF8B1A24652E00A25034 /* HisuntechPaySucceedController.m */; };
+		9FA6DF931A24657B00A25034 /* HisuntechBankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF911A24657B00A25034 /* HisuntechBankCell.m */; };
+		9FA6DFA11A24658A00A25034 /* HisuntechAddCreditCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF961A24658A00A25034 /* HisuntechAddCreditCardController.m */; };
+		9FA6DFA21A24658A00A25034 /* HisuntechAddDebitCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF981A24658A00A25034 /* HisuntechAddDebitCardController.m */; };
+		9FA6DFA51A24658A00A25034 /* HisuntechBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DF9E1A24658A00A25034 /* HisuntechBankController.m */; };
+		9FA6DFA61A24658A00A25034 /* HisuntechBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFA01A24658A00A25034 /* HisuntechBgView.m */; };
+		9FA6DFC11A2466ED00A25034 /* HisuntechAccountPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFAA1A2466ED00A25034 /* HisuntechAccountPayCell.m */; };
+		9FA6DFC21A2466ED00A25034 /* HisuntechOrderMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFAD1A2466ED00A25034 /* HisuntechOrderMoneyCell.m */; };
+		9FA6DFC31A2466ED00A25034 /* HisuntechPayPwdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFAE1A2466ED00A25034 /* HisuntechPayPwdCell.m */; };
+		9FA6DFC41A2466ED00A25034 /* HisuntechQuickCreditPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFB01A2466ED00A25034 /* HisuntechQuickCreditPayCell.m */; };
+		9FA6DFC51A2466ED00A25034 /* HisuntechQuickDebitPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFB21A2466ED00A25034 /* HisuntechQuickDebitPayCell.m */; };
+		9FA6DFC61A2466ED00A25034 /* HisuntechQuickPayItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFB41A2466ED00A25034 /* HisuntechQuickPayItemCell.m */; };
+		9FA6DFC71A2466ED00A25034 /* HisuntechQuickPayMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFB61A2466ED00A25034 /* HisuntechQuickPayMoneyCell.m */; };
+		9FA6DFC81A2466ED00A25034 /* HisuntechSurePayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFB81A2466ED00A25034 /* HisuntechSurePayCell.m */; };
+		9FA6DFC91A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFBA1A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.m */; };
+		9FA6DFCA1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFBC1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.m */; };
+		9FA6DFCB1A2466ED00A25034 /* HisuntechBankCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFBE1A2466ED00A25034 /* HisuntechBankCellView.m */; };
+		9FA6DFCC1A2466ED00A25034 /* HisuntechAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFC01A2466ED00A25034 /* HisuntechAddView.m */; };
+		9FA6DFCF1A24670400A25034 /* HisuntechMixPayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFCE1A24670400A25034 /* HisuntechMixPayViewController.mm */; };
+		9FA6DFD71A24671400A25034 /* HisuntechBuildJsonString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFD21A24671400A25034 /* HisuntechBuildJsonString.m */; };
+		9FA6DFD81A24671400A25034 /* HisuntechOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFD41A24671400A25034 /* HisuntechOrderEntity.m */; };
+		9FA6DFD91A24671400A25034 /* HisuntechUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6DFD61A24671400A25034 /* HisuntechUserEntity.m */; };
+		9FA6E0431A24674200A25034 /* HisuntechConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E03B1A24674200A25034 /* HisuntechConvert.m */; };
+		9FA6E0441A24674200A25034 /* HisuntechLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E03D1A24674200A25034 /* HisuntechLoadingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9FA6E0451A24674200A25034 /* HisunTechTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E03F1A24674200A25034 /* HisunTechTools.m */; };
+		9FA6E0461A24674200A25034 /* HisuntechValidateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E0411A24674200A25034 /* HisuntechValidateCheck.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9FA6E04B1A24677300A25034 /* HisuntechBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E0481A24677300A25034 /* HisuntechBaseViewController.m */; };
+		9FA6E04C1A24677300A25034 /* HisuntechLoginController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E04A1A24677300A25034 /* HisuntechLoginController.mm */; };
+		9FA6E0571A246E3B00A25034 /* HisuntechPaySDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6E0561A246E3B00A25034 /* HisuntechPaySDK.m */; };
+		9FA6E1B31A2483AB00A25034 /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E18B1A2483AA00A25034 /* bank.plist */; };
+		9FA6E1B41A2483AB00A25034 /* back_btn_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E18D1A2483AB00A25034 /* back_btn_n@2x.png */; };
+		9FA6E1B51A2483AB00A25034 /* bank2_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E18E1A2483AB00A25034 /* bank2_ic.png */; };
+		9FA6E1B61A2483AB00A25034 /* bank_fund.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E18F1A2483AB00A25034 /* bank_fund.png */; };
+		9FA6E1B71A2483AB00A25034 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1901A2483AB00A25034 /* blackArrow.png */; };
+		9FA6E1B81A2483AB00A25034 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1911A2483AB00A25034 /* blackArrow@2x.png */; };
+		9FA6E1B91A2483AB00A25034 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1921A2483AB00A25034 /* blueArrow.png */; };
+		9FA6E1BA1A2483AB00A25034 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1931A2483AB00A25034 /* blueArrow@2x.png */; };
+		9FA6E1BB1A2483AB00A25034 /* choicebox_btn_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1941A2483AB00A25034 /* choicebox_btn_n@2x.png */; };
+		9FA6E1BC1A2483AB00A25034 /* circle_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1951A2483AB00A25034 /* circle_ic@2x.png */; };
+		9FA6E1BD1A2483AB00A25034 /* coupon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1961A2483AB00A25034 /* coupon_1@2x.png */; };
+		9FA6E1BE1A2483AB00A25034 /* coupon_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1971A2483AB00A25034 /* coupon_2@2x.png */; };
+		9FA6E1BF1A2483AB00A25034 /* coupon_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1981A2483AB00A25034 /* coupon_3@2x.png */; };
+		9FA6E1C01A2483AB00A25034 /* coupon_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1991A2483AB00A25034 /* coupon_4@2x.png */; };
+		9FA6E1C11A2483AB00A25034 /* credit card_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19A1A2483AB00A25034 /* credit card_ic@2x.png */; };
+		9FA6E1C21A2483AB00A25034 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19B1A2483AB00A25034 /* grayArrow.png */; };
+		9FA6E1C31A2483AB00A25034 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19C1A2483AB00A25034 /* grayArrow@2x.png */; };
+		9FA6E1C41A2483AB00A25034 /* h_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19D1A2483AB00A25034 /* h_line.png */; };
+		9FA6E1C51A2483AB00A25034 /* index_icon_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19E1A2483AB00A25034 /* index_icon_bg.png */; };
+		9FA6E1C61A2483AB00A25034 /* login_btn_n.9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E19F1A2483AB00A25034 /* login_btn_n.9@2x.png */; };
+		9FA6E1C71A2483AB00A25034 /* password_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A01A2483AB00A25034 /* password_ic@2x.png */; };
+		9FA6E1C81A2483AB00A25034 /* pay fail_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A11A2483AB00A25034 /* pay fail_ic@2x.png */; };
+		9FA6E1C91A2483AB00A25034 /* pay succeed_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A21A2483AB00A25034 /* pay succeed_ic@2x.png */; };
+		9FA6E1CA1A2483AB00A25034 /* pay_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A31A2483AB00A25034 /* pay_bg.png */; };
+		9FA6E1CB1A2483AB00A25034 /* pull_down_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A41A2483AB00A25034 /* pull_down_btn@2x.png */; };
+		9FA6E1CC1A2483AB00A25034 /* pull_right_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A51A2483AB00A25034 /* pull_right_btn@2x.png */; };
+		9FA6E1CD1A2483AB00A25034 /* pull_up_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A61A2483AB00A25034 /* pull_up_btn@2x.png */; };
+		9FA6E1CE1A2483AB00A25034 /* red packet_choicebox_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A71A2483AB00A25034 /* red packet_choicebox_ic@2x.png */; };
+		9FA6E1CF1A2483AB00A25034 /* red packet_choicebox_ic_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A81A2483AB00A25034 /* red packet_choicebox_ic_n@2x.png */; };
+		9FA6E1D01A2483AB00A25034 /* red-packet_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1A91A2483AB00A25034 /* red-packet_ic@2x.png */; };
+		9FA6E1D11A2483AB00A25034 /* refresh_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AA1A2483AB00A25034 /* refresh_arrow.png */; };
+		9FA6E1D21A2483AB00A25034 /* refresh_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AB1A2483AB00A25034 /* refresh_arrow@2x.png */; };
+		9FA6E1D31A2483AB00A25034 /* tag_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AC1A2483AB00A25034 /* tag_ic@2x.png */; };
+		9FA6E1D41A2483AB00A25034 /* username_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AD1A2483AB00A25034 /* username_ic@2x.png */; };
+		9FA6E1D51A2483AB00A25034 /* visa_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AE1A2483AB00A25034 /* visa_ic@2x.png */; };
+		9FA6E1D61A2483AB00A25034 /* wallet_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1AF1A2483AB00A25034 /* wallet_ic@2x.png */; };
+		9FA6E1D71A2483AB00A25034 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1B01A2483AB00A25034 /* whiteArrow.png */; };
+		9FA6E1D81A2483AB00A25034 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1B11A2483AB00A25034 /* whiteArrow@2x.png */; };
+		9FA6E1D91A2483AB00A25034 /* bankNo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FA6E1B21A2483AB00A25034 /* bankNo.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FA6DF461A24637A00A25034 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = include;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		065C9A1F1B8FE64800EA83AF /* payPasswordReslutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payPasswordReslutViewController.h; sourceTree = "<group>"; };
+		065C9A201B8FE64800EA83AF /* payPasswordReslutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = payPasswordReslutViewController.m; sourceTree = "<group>"; };
+		067F65FF1B6088D00022D89E /* retrievePayPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = retrievePayPwdController.h; sourceTree = "<group>"; };
+		067F66001B6088D00022D89E /* retrievePayPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = retrievePayPwdController.m; sourceTree = "<group>"; };
+		067F66031B60CDC90022D89E /* validatePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = validatePhoneController.h; sourceTree = "<group>"; };
+		067F66041B60CDC90022D89E /* validatePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = validatePhoneController.m; sourceTree = "<group>"; };
+		067F66081B60D4BA0022D89E /* captchaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = captchaController.h; sourceTree = "<group>"; };
+		067F66091B60D4BA0022D89E /* captchaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = captchaController.m; sourceTree = "<group>"; };
+		067F660C1B60D8DD0022D89E /* GetPayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPayPasswordViewController.h; sourceTree = "<group>"; };
+		067F660D1B60D8DD0022D89E /* GetPayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPayPasswordViewController.m; sourceTree = "<group>"; };
+		067F66101B60D92B0022D89E /* resetPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetPasswordController.h; sourceTree = "<group>"; };
+		067F66111B60D92B0022D89E /* resetPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetPasswordController.m; sourceTree = "<group>"; };
+		0693975F1BFEC20500013236 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libstdc++.dylib"; sourceTree = "<group>"; };
+		06A1C96A1B69CDBE00883987 /* IDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDViewController.h; sourceTree = "<group>"; };
+		06A1C96B1B69CDBE00883987 /* IDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDViewController.m; sourceTree = "<group>"; };
+		06A1C9701B6A103500883987 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		06A1C9711B6A103500883987 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		06A401BC1B5DF77E00612CDB /* PayProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayProtocolViewController.h; sourceTree = "<group>"; };
+		06A401BD1B5DF77E00612CDB /* PayProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayProtocolViewController.m; sourceTree = "<group>"; };
+		06F8EB1E1B3045A400D384DE /* bg_checkbox_yinlian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_checkbox_yinlian.png; sourceTree = "<group>"; };
+		0BD1364C1B27E64A0093D196 /* HisuntechBankPayViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBankPayViewCell.h; sourceTree = "<group>"; };
+		0BD1364D1B27E64A0093D196 /* HisuntechBankPayViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBankPayViewCell.m; sourceTree = "<group>"; };
+		1AA3F9F21D389E670056E52F /* HisuntechIQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HisuntechIQKeyboardManager.bundle; sourceTree = "<group>"; };
+		1AA3F9F31D389E670056E52F /* HisuntechIQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQKeyboardManager.h; sourceTree = "<group>"; };
+		1AA3F9F41D389E670056E52F /* HisuntechIQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIQKeyboardManager.m; sourceTree = "<group>"; };
+		1AA3F9F51D389E670056E52F /* HisuntechIQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		1AA3F9F61D389E670056E52F /* HisuntechIQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		1AA3F9F71D389E670056E52F /* HisuntechIQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		1AA3F9F81D389E670056E52F /* HisuntechIQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		1AA3F9F91D389E670056E52F /* HisuntechIQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQTextView.h; sourceTree = "<group>"; };
+		1AA3F9FA1D389E670056E52F /* HisuntechIQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIQTextView.m; sourceTree = "<group>"; };
+		1AA3F9FB1D389E670056E52F /* HisuntechIQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		1AA3F9FC1D389E670056E52F /* HisuntechIQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		1AA3F9FD1D389E670056E52F /* HisuntechIQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIQToolbar.h; sourceTree = "<group>"; };
+		1AA3F9FE1D389E670056E52F /* HisuntechIQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIQToolbar.m; sourceTree = "<group>"; };
+		1AA3F9FF1D389E670056E52F /* HisuntechKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechKeyboardManager.h; sourceTree = "<group>"; };
+		1AA3FA001D389E670056E52F /* HisuntechNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechNSArray+Sort.h"; sourceTree = "<group>"; };
+		1AA3FA011D389E670056E52F /* HisuntechNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechNSArray+Sort.m"; sourceTree = "<group>"; };
+		1AA3FA021D389E670056E52F /* HisuntechUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		1AA3FA031D389E670056E52F /* HisuntechUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		1AA3FA041D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		1AA3FA051D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		1AA3FA061D389E670056E52F /* HisuntechUIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		1AA3FA071D389E670056E52F /* HisuntechUIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		1AA3FA0C1D389E670056E52F /* HisuntechColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechColor.h; sourceTree = "<group>"; };
+		1AA3FA0D1D389E670056E52F /* HisuntechColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechColor.m; sourceTree = "<group>"; };
+		1AA3FA0E1D389E670056E52F /* HisuntechUIColor+YUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIColor+YUColor.h"; sourceTree = "<group>"; };
+		1AA3FA0F1D389E670056E52F /* HisuntechUIColor+YUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIColor+YUColor.m"; sourceTree = "<group>"; };
+		1AA3FA111D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		1AA3FA121D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		1AA3FA131D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA141D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA151D389E670056E52F /* HisuntechUIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA161D389E670056E52F /* HisuntechUIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA171D389E670056E52F /* HisuntechUIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA181D389E670056E52F /* HisuntechUIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA191D389E670056E52F /* HisuntechUIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA1A1D389E670056E52F /* HisuntechUIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA1B1D389E670056E52F /* HisuntechUIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA1C1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA1D1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA1E1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA1F1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA201D389E670056E52F /* HisuntechUIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HisuntechUIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		1AA3FA211D389E670056E52F /* HisuntechUIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HisuntechUIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		1AA3FA511D389E670056E52F /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
+		1AA3FA521D389E670056E52F /* UPPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPlugin.h; sourceTree = "<group>"; };
+		1AA3FA531D389E670056E52F /* UPPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPluginDelegate.h; sourceTree = "<group>"; };
+		1AA3FAEB1D389F510056E52F /* EditTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextField.h; sourceTree = "<group>"; };
+		1AA3FAEC1D389F510056E52F /* iProtect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProtect.h; sourceTree = "<group>"; };
+		1AA3FAED1D389F510056E52F /* iProtectTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iProtectTypes.h; sourceTree = "<group>"; };
+		1AA3FAEE1D389F510056E52F /* PasswordKeyboardDelegate+VIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordKeyboardDelegate+VIP.h"; sourceTree = "<group>"; };
+		1AA3FAEF1D389F510056E52F /* PasswordKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordKeyboardDelegate.h; sourceTree = "<group>"; };
+		1AA3FAF01D389F510056E52F /* PasswordTextField+VIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordTextField+VIP.h"; sourceTree = "<group>"; };
+		1AA3FAF11D389F510056E52F /* PasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
+		1AA3FAF21D389F510056E52F /* VXPasswordKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPasswordKeyboardDelegate.h; sourceTree = "<group>"; };
+		1AA3FAF31D389F510056E52F /* WebPasswordKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPasswordKeyboard.h; sourceTree = "<group>"; };
+		1AA3FAF41D389F510056E52F /* WebPasswordKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPasswordKeyboardController.h; sourceTree = "<group>"; };
+		1AA3FAF51D389F510056E52F /* WebPasswordKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPasswordKeyboardDelegate.h; sourceTree = "<group>"; };
+		1AA3FAF91D389F510056E52F /* libiProtectSDHS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiProtectSDHS.a; sourceTree = "<group>"; };
+		1AA3FAFA1D389F510056E52F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libstdc++.dylib"; sourceTree = "<group>"; };
+		1AA3FAFC1D389F510056E52F /* SDHS.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SDHS.xcconfig; sourceTree = "<group>"; };
+		1AA3FB721D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		1AA3FB731D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		1AA3FB741D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		1AA3FB751D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		1AA3FB761D38A92D0056E52F /* HisuntechAFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		1AA3FB771D38A92D0056E52F /* HisuntechAFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		1AA3FB781D38A92D0056E52F /* HisuntechAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFNetworking.h; sourceTree = "<group>"; };
+		1AA3FB791D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		1AA3FB7A1D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		1AA3FB7B1D38A92D0056E52F /* HisuntechAFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFSecurityPolicy.h; sourceTree = "<group>"; };
+		1AA3FB7C1D38A92D0056E52F /* HisuntechAFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFSecurityPolicy.m; sourceTree = "<group>"; };
+		1AA3FB7D1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFURLConnectionOperation.h; sourceTree = "<group>"; };
+		1AA3FB7E1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFURLConnectionOperation.m; sourceTree = "<group>"; };
+		1AA3FB7F1D38A92D0056E52F /* HisuntechAFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFURLRequestSerialization.h; sourceTree = "<group>"; };
+		1AA3FB801D38A92D0056E52F /* HisuntechAFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFURLRequestSerialization.m; sourceTree = "<group>"; };
+		1AA3FB811D38A92D0056E52F /* HisuntechAFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFURLResponseSerialization.h; sourceTree = "<group>"; };
+		1AA3FB821D38A92D0056E52F /* HisuntechAFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFURLResponseSerialization.m; sourceTree = "<group>"; };
+		1AA3FB831D38A92D0056E52F /* HisuntechAFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAFURLSessionManager.h; sourceTree = "<group>"; };
+		1AA3FB841D38A92D0056E52F /* HisuntechAFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAFURLSessionManager.m; sourceTree = "<group>"; };
+		1ABE65491D4C97DD00D2C278 /* HisuntechReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechReachability.h; sourceTree = "<group>"; };
+		1ABE654A1D4C97DD00D2C278 /* HisuntechReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechReachability.m; sourceTree = "<group>"; };
+		9F47D4B11A25D13000D7A747 /* HisuntechForgetPasswordResetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechForgetPasswordResetingController.h; sourceTree = "<group>"; };
+		9F47D4B21A25D13000D7A747 /* HisuntechForgetPasswordResetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechForgetPasswordResetingController.m; sourceTree = "<group>"; };
+		9F47D4B31A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechForgetPasswordVerifyController.h; sourceTree = "<group>"; };
+		9F47D4B41A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechForgetPasswordVerifyController.m; sourceTree = "<group>"; };
+		9F47D4B51A25D13000D7A747 /* HisuntechForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechForgetPasswordViewController.h; sourceTree = "<group>"; };
+		9F47D4B61A25D13000D7A747 /* HisuntechForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechForgetPasswordViewController.m; sourceTree = "<group>"; };
+		9F47D4C31A25D14100D7A747 /* HisuntechTableViewWithBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechTableViewWithBlock.h; sourceTree = "<group>"; };
+		9F47D4C41A25D14100D7A747 /* HisuntechTableViewWithBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechTableViewWithBlock.m; sourceTree = "<group>"; };
+		9F47D4C51A25D14100D7A747 /* UITableView+DataSourceBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DataSourceBlocks.h"; sourceTree = "<group>"; };
+		9F47D4C61A25D14100D7A747 /* UITableView+DataSourceBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DataSourceBlocks.m"; sourceTree = "<group>"; };
+		9F47D4C71A25D14100D7A747 /* UITableView+DelegateBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DelegateBlocks.h"; sourceTree = "<group>"; };
+		9F47D4C81A25D14100D7A747 /* UITableView+DelegateBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DelegateBlocks.m"; sourceTree = "<group>"; };
+		9F47D4C91A25D14100D7A747 /* HisuntechIdCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechIdCardViewController.h; sourceTree = "<group>"; };
+		9F47D4CA1A25D14100D7A747 /* HisuntechIdCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechIdCardViewController.m; sourceTree = "<group>"; };
+		9F47D4CB1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechRegisterSettingPasswordViewController.h; sourceTree = "<group>"; };
+		9F47D4CC1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechRegisterSettingPasswordViewController.m; sourceTree = "<group>"; };
+		9F47D4CD1A25D14100D7A747 /* HisuntechRegisterVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechRegisterVerifyViewController.h; sourceTree = "<group>"; };
+		9F47D4CE1A25D14100D7A747 /* HisuntechRegisterVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechRegisterVerifyViewController.m; sourceTree = "<group>"; };
+		9F47D4CF1A25D14100D7A747 /* HisuntechRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechRegisterViewController.h; sourceTree = "<group>"; };
+		9F47D4D01A25D14100D7A747 /* HisuntechRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechRegisterViewController.m; sourceTree = "<group>"; };
+		9F47D4D11A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechSettingPayPasswordViewController.h; sourceTree = "<group>"; };
+		9F47D4D21A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechSettingPayPasswordViewController.m; sourceTree = "<group>"; };
+		9F47D4E61A25D17A00D7A747 /* HisuntechNormalTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechNormalTextField.h; sourceTree = "<group>"; };
+		9F47D4E71A25D17A00D7A747 /* HisuntechNormalTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechNormalTextField.m; sourceTree = "<group>"; };
+		9F47D4E81A25D17A00D7A747 /* HisuntechPooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechPooCodeView.h; sourceTree = "<group>"; };
+		9F47D4E91A25D17A00D7A747 /* HisuntechPooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechPooCodeView.m; sourceTree = "<group>"; };
+		9FA6DF481A24637A00A25034 /* libhisuntechSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhisuntechSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA6DF4B1A24637A00A25034 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FA6DF4F1A24637A00A25034 /* hisuntechSdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hisuntechSdk-Prefix.pch"; sourceTree = "<group>"; };
+		9FA6DF591A24637A00A25034 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9FA6DF5C1A24637A00A25034 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9FA6DF631A24637A00A25034 /* hisuntechSdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hisuntechSdkTests-Info.plist"; sourceTree = "<group>"; };
+		9FA6DF651A24637A00A25034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FA6DF671A24637A00A25034 /* hisuntechSdkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hisuntechSdkTests.m; sourceTree = "<group>"; };
+		9FA6DF721A2464D000A25034 /* HisuntechCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechCustomAlertView.h; sourceTree = "<group>"; };
+		9FA6DF731A2464D000A25034 /* HisuntechCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechCustomAlertView.m; sourceTree = "<group>"; };
+		9FA6DF841A2464F700A25034 /* HisuntechAccountPayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAccountPayController.h; sourceTree = "<group>"; };
+		9FA6DF851A2464F700A25034 /* HisuntechAccountPayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAccountPayController.m; sourceTree = "<group>"; };
+		9FA6DF881A24652E00A25034 /* HisuntechPayFailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechPayFailedViewController.h; sourceTree = "<group>"; };
+		9FA6DF891A24652E00A25034 /* HisuntechPayFailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechPayFailedViewController.m; sourceTree = "<group>"; };
+		9FA6DF8A1A24652E00A25034 /* HisuntechPaySucceedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechPaySucceedController.h; sourceTree = "<group>"; };
+		9FA6DF8B1A24652E00A25034 /* HisuntechPaySucceedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechPaySucceedController.m; sourceTree = "<group>"; };
+		9FA6DF901A24657B00A25034 /* HisuntechBankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBankCell.h; sourceTree = "<group>"; };
+		9FA6DF911A24657B00A25034 /* HisuntechBankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBankCell.m; sourceTree = "<group>"; };
+		9FA6DF941A24658A00A25034 /* HisuntechBNDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBNDelegate.h; sourceTree = "<group>"; };
+		9FA6DF951A24658A00A25034 /* HisuntechAddCreditCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAddCreditCardController.h; sourceTree = "<group>"; };
+		9FA6DF961A24658A00A25034 /* HisuntechAddCreditCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAddCreditCardController.m; sourceTree = "<group>"; };
+		9FA6DF971A24658A00A25034 /* HisuntechAddDebitCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAddDebitCardController.h; sourceTree = "<group>"; };
+		9FA6DF981A24658A00A25034 /* HisuntechAddDebitCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAddDebitCardController.m; sourceTree = "<group>"; };
+		9FA6DF9D1A24658A00A25034 /* HisuntechBankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBankController.h; sourceTree = "<group>"; };
+		9FA6DF9E1A24658A00A25034 /* HisuntechBankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBankController.m; sourceTree = "<group>"; };
+		9FA6DF9F1A24658A00A25034 /* HisuntechBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBgView.h; sourceTree = "<group>"; };
+		9FA6DFA01A24658A00A25034 /* HisuntechBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBgView.m; sourceTree = "<group>"; };
+		9FA6DFA91A2466ED00A25034 /* HisuntechAccountPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAccountPayCell.h; sourceTree = "<group>"; };
+		9FA6DFAA1A2466ED00A25034 /* HisuntechAccountPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAccountPayCell.m; sourceTree = "<group>"; };
+		9FA6DFAB1A2466ED00A25034 /* HisuntechOrderMoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechOrderMoneyCell.h; sourceTree = "<group>"; };
+		9FA6DFAC1A2466ED00A25034 /* HisuntechPayPwdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechPayPwdCell.h; sourceTree = "<group>"; };
+		9FA6DFAD1A2466ED00A25034 /* HisuntechOrderMoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechOrderMoneyCell.m; sourceTree = "<group>"; };
+		9FA6DFAE1A2466ED00A25034 /* HisuntechPayPwdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechPayPwdCell.m; sourceTree = "<group>"; };
+		9FA6DFAF1A2466ED00A25034 /* HisuntechQuickCreditPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickCreditPayCell.h; sourceTree = "<group>"; };
+		9FA6DFB01A2466ED00A25034 /* HisuntechQuickCreditPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickCreditPayCell.m; sourceTree = "<group>"; };
+		9FA6DFB11A2466ED00A25034 /* HisuntechQuickDebitPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickDebitPayCell.h; sourceTree = "<group>"; };
+		9FA6DFB21A2466ED00A25034 /* HisuntechQuickDebitPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickDebitPayCell.m; sourceTree = "<group>"; };
+		9FA6DFB31A2466ED00A25034 /* HisuntechQuickPayItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickPayItemCell.h; sourceTree = "<group>"; };
+		9FA6DFB41A2466ED00A25034 /* HisuntechQuickPayItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickPayItemCell.m; sourceTree = "<group>"; };
+		9FA6DFB51A2466ED00A25034 /* HisuntechQuickPayMoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickPayMoneyCell.h; sourceTree = "<group>"; };
+		9FA6DFB61A2466ED00A25034 /* HisuntechQuickPayMoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickPayMoneyCell.m; sourceTree = "<group>"; };
+		9FA6DFB71A2466ED00A25034 /* HisuntechSurePayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechSurePayCell.h; sourceTree = "<group>"; };
+		9FA6DFB81A2466ED00A25034 /* HisuntechSurePayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechSurePayCell.m; sourceTree = "<group>"; };
+		9FA6DFB91A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickCreditPayViewCell.h; sourceTree = "<group>"; };
+		9FA6DFBA1A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickCreditPayViewCell.m; sourceTree = "<group>"; };
+		9FA6DFBB1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechQuickDebitPayViewCell.h; sourceTree = "<group>"; };
+		9FA6DFBC1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechQuickDebitPayViewCell.m; sourceTree = "<group>"; };
+		9FA6DFBD1A2466ED00A25034 /* HisuntechBankCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBankCellView.h; sourceTree = "<group>"; };
+		9FA6DFBE1A2466ED00A25034 /* HisuntechBankCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBankCellView.m; sourceTree = "<group>"; };
+		9FA6DFBF1A2466ED00A25034 /* HisuntechAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechAddView.h; sourceTree = "<group>"; };
+		9FA6DFC01A2466ED00A25034 /* HisuntechAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechAddView.m; sourceTree = "<group>"; };
+		9FA6DFCD1A24670400A25034 /* HisuntechMixPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechMixPayViewController.h; sourceTree = "<group>"; };
+		9FA6DFCE1A24670400A25034 /* HisuntechMixPayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HisuntechMixPayViewController.mm; sourceTree = "<group>"; };
+		9FA6DFD11A24671400A25034 /* HisuntechBuildJsonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBuildJsonString.h; sourceTree = "<group>"; };
+		9FA6DFD21A24671400A25034 /* HisuntechBuildJsonString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBuildJsonString.m; sourceTree = "<group>"; };
+		9FA6DFD31A24671400A25034 /* HisuntechOrderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechOrderEntity.h; sourceTree = "<group>"; };
+		9FA6DFD41A24671400A25034 /* HisuntechOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechOrderEntity.m; sourceTree = "<group>"; };
+		9FA6DFD51A24671400A25034 /* HisuntechUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechUserEntity.h; sourceTree = "<group>"; };
+		9FA6DFD61A24671400A25034 /* HisuntechUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechUserEntity.m; sourceTree = "<group>"; };
+		9FA6E0391A24674200A25034 /* HisuntechConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechConstant.h; sourceTree = "<group>"; };
+		9FA6E03A1A24674200A25034 /* HisuntechConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechConvert.h; sourceTree = "<group>"; };
+		9FA6E03B1A24674200A25034 /* HisuntechConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechConvert.m; sourceTree = "<group>"; };
+		9FA6E03C1A24674200A25034 /* HisuntechLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechLoadingView.h; sourceTree = "<group>"; };
+		9FA6E03D1A24674200A25034 /* HisuntechLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechLoadingView.m; sourceTree = "<group>"; };
+		9FA6E03E1A24674200A25034 /* HisunTechTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisunTechTools.h; sourceTree = "<group>"; };
+		9FA6E03F1A24674200A25034 /* HisunTechTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisunTechTools.m; sourceTree = "<group>"; };
+		9FA6E0401A24674200A25034 /* HisuntechValidateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechValidateCheck.h; sourceTree = "<group>"; };
+		9FA6E0411A24674200A25034 /* HisuntechValidateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechValidateCheck.m; sourceTree = "<group>"; };
+		9FA6E0471A24677300A25034 /* HisuntechBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechBaseViewController.h; sourceTree = "<group>"; };
+		9FA6E0481A24677300A25034 /* HisuntechBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechBaseViewController.m; sourceTree = "<group>"; };
+		9FA6E0491A24677300A25034 /* HisuntechLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechLoginController.h; sourceTree = "<group>"; };
+		9FA6E04A1A24677300A25034 /* HisuntechLoginController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HisuntechLoginController.mm; sourceTree = "<group>"; };
+		9FA6E04D1A2467CD00A25034 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9FA6E0511A246A5F00A25034 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9FA6E0531A246A6C00A25034 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9FA6E0551A246E3B00A25034 /* HisuntechPaySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HisuntechPaySDK.h; sourceTree = "<group>"; };
+		9FA6E0561A246E3B00A25034 /* HisuntechPaySDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HisuntechPaySDK.m; sourceTree = "<group>"; };
+		9FA6E18B1A2483AA00A25034 /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
+		9FA6E18D1A2483AB00A25034 /* back_btn_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_btn_n@2x.png"; sourceTree = "<group>"; };
+		9FA6E18E1A2483AB00A25034 /* bank2_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank2_ic.png; sourceTree = "<group>"; };
+		9FA6E18F1A2483AB00A25034 /* bank_fund.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank_fund.png; sourceTree = "<group>"; };
+		9FA6E1901A2483AB00A25034 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		9FA6E1911A2483AB00A25034 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		9FA6E1921A2483AB00A25034 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		9FA6E1931A2483AB00A25034 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		9FA6E1941A2483AB00A25034 /* choicebox_btn_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choicebox_btn_n@2x.png"; sourceTree = "<group>"; };
+		9FA6E1951A2483AB00A25034 /* circle_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1961A2483AB00A25034 /* coupon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon_1@2x.png"; sourceTree = "<group>"; };
+		9FA6E1971A2483AB00A25034 /* coupon_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon_2@2x.png"; sourceTree = "<group>"; };
+		9FA6E1981A2483AB00A25034 /* coupon_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon_3@2x.png"; sourceTree = "<group>"; };
+		9FA6E1991A2483AB00A25034 /* coupon_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon_4@2x.png"; sourceTree = "<group>"; };
+		9FA6E19A1A2483AB00A25034 /* credit card_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit card_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E19B1A2483AB00A25034 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		9FA6E19C1A2483AB00A25034 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		9FA6E19D1A2483AB00A25034 /* h_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h_line.png; sourceTree = "<group>"; };
+		9FA6E19E1A2483AB00A25034 /* index_icon_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_icon_bg.png; sourceTree = "<group>"; };
+		9FA6E19F1A2483AB00A25034 /* login_btn_n.9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn_n.9@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A01A2483AB00A25034 /* password_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A11A2483AB00A25034 /* pay fail_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay fail_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A21A2483AB00A25034 /* pay succeed_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay succeed_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A31A2483AB00A25034 /* pay_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_bg.png; sourceTree = "<group>"; };
+		9FA6E1A41A2483AB00A25034 /* pull_down_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pull_down_btn@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A51A2483AB00A25034 /* pull_right_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pull_right_btn@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A61A2483AB00A25034 /* pull_up_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pull_up_btn@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A71A2483AB00A25034 /* red packet_choicebox_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red packet_choicebox_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A81A2483AB00A25034 /* red packet_choicebox_ic_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red packet_choicebox_ic_n@2x.png"; sourceTree = "<group>"; };
+		9FA6E1A91A2483AB00A25034 /* red-packet_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-packet_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1AA1A2483AB00A25034 /* refresh_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_arrow.png; sourceTree = "<group>"; };
+		9FA6E1AB1A2483AB00A25034 /* refresh_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_arrow@2x.png"; sourceTree = "<group>"; };
+		9FA6E1AC1A2483AB00A25034 /* tag_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1AD1A2483AB00A25034 /* username_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "username_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1AE1A2483AB00A25034 /* visa_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visa_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1AF1A2483AB00A25034 /* wallet_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet_ic@2x.png"; sourceTree = "<group>"; };
+		9FA6E1B01A2483AB00A25034 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		9FA6E1B11A2483AB00A25034 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		9FA6E1B21A2483AB00A25034 /* bankNo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bankNo.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FA6DF451A24637A00A25034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA3FABF1D389E670056E52F /* libUPPayPlugin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		067F65FE1B6088D00022D89E /* findPayPassword */ = {
+			isa = PBXGroup;
+			children = (
+				067F66101B60D92B0022D89E /* resetPasswordController.h */,
+				067F66111B60D92B0022D89E /* resetPasswordController.m */,
+				067F660C1B60D8DD0022D89E /* GetPayPasswordViewController.h */,
+				067F660D1B60D8DD0022D89E /* GetPayPasswordViewController.m */,
+				067F66081B60D4BA0022D89E /* captchaController.h */,
+				067F66091B60D4BA0022D89E /* captchaController.m */,
+				067F66031B60CDC90022D89E /* validatePhoneController.h */,
+				067F66041B60CDC90022D89E /* validatePhoneController.m */,
+				067F65FF1B6088D00022D89E /* retrievePayPwdController.h */,
+				067F66001B6088D00022D89E /* retrievePayPwdController.m */,
+				065C9A1F1B8FE64800EA83AF /* payPasswordReslutViewController.h */,
+				065C9A201B8FE64800EA83AF /* payPasswordReslutViewController.m */,
+			);
+			path = findPayPassword;
+			sourceTree = "<group>";
+		};
+		1AA3F9F11D389E670056E52F /* HisuntechIQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3F9F21D389E670056E52F /* HisuntechIQKeyboardManager.bundle */,
+				1AA3F9F31D389E670056E52F /* HisuntechIQKeyboardManager.h */,
+				1AA3F9F41D389E670056E52F /* HisuntechIQKeyboardManager.m */,
+				1AA3F9F51D389E670056E52F /* HisuntechIQKeyboardManagerConstants.h */,
+				1AA3F9F61D389E670056E52F /* HisuntechIQKeyboardManagerConstantsInternal.h */,
+				1AA3F9F71D389E670056E52F /* HisuntechIQSegmentedNextPrevious.h */,
+				1AA3F9F81D389E670056E52F /* HisuntechIQSegmentedNextPrevious.m */,
+				1AA3F9F91D389E670056E52F /* HisuntechIQTextView.h */,
+				1AA3F9FA1D389E670056E52F /* HisuntechIQTextView.m */,
+				1AA3F9FB1D389E670056E52F /* HisuntechIQTitleBarButtonItem.h */,
+				1AA3F9FC1D389E670056E52F /* HisuntechIQTitleBarButtonItem.m */,
+				1AA3F9FD1D389E670056E52F /* HisuntechIQToolbar.h */,
+				1AA3F9FE1D389E670056E52F /* HisuntechIQToolbar.m */,
+				1AA3F9FF1D389E670056E52F /* HisuntechKeyboardManager.h */,
+				1AA3FA001D389E670056E52F /* HisuntechNSArray+Sort.h */,
+				1AA3FA011D389E670056E52F /* HisuntechNSArray+Sort.m */,
+				1AA3FA021D389E670056E52F /* HisuntechUIView+Hierarchy.h */,
+				1AA3FA031D389E670056E52F /* HisuntechUIView+Hierarchy.m */,
+				1AA3FA041D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.h */,
+				1AA3FA051D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.m */,
+				1AA3FA061D389E670056E52F /* HisuntechUIWindow+Hierarchy.h */,
+				1AA3FA071D389E670056E52F /* HisuntechUIWindow+Hierarchy.m */,
+			);
+			path = HisuntechIQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		1AA3FA0B1D389E670056E52F /* HisuntechUIColor */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FA0C1D389E670056E52F /* HisuntechColor.h */,
+				1AA3FA0D1D389E670056E52F /* HisuntechColor.m */,
+				1AA3FA0E1D389E670056E52F /* HisuntechUIColor+YUColor.h */,
+				1AA3FA0F1D389E670056E52F /* HisuntechUIColor+YUColor.m */,
+			);
+			path = HisuntechUIColor;
+			sourceTree = "<group>";
+		};
+		1AA3FA101D389E670056E52F /* HisuntechUIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FA111D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.h */,
+				1AA3FA121D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.m */,
+				1AA3FA131D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.h */,
+				1AA3FA141D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.m */,
+				1AA3FA151D389E670056E52F /* HisuntechUIAlertView+AFNetworking.h */,
+				1AA3FA161D389E670056E52F /* HisuntechUIAlertView+AFNetworking.m */,
+				1AA3FA171D389E670056E52F /* HisuntechUIButton+AFNetworking.h */,
+				1AA3FA181D389E670056E52F /* HisuntechUIButton+AFNetworking.m */,
+				1AA3FA191D389E670056E52F /* HisuntechUIImageView+AFNetworking.h */,
+				1AA3FA1A1D389E670056E52F /* HisuntechUIImageView+AFNetworking.m */,
+				1AA3FA1B1D389E670056E52F /* HisuntechUIKit+AFNetworking.h */,
+				1AA3FA1C1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.h */,
+				1AA3FA1D1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.m */,
+				1AA3FA1E1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.h */,
+				1AA3FA1F1D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.m */,
+				1AA3FA201D389E670056E52F /* HisuntechUIWebView+AFNetworking.h */,
+				1AA3FA211D389E670056E52F /* HisuntechUIWebView+AFNetworking.m */,
+			);
+			path = "HisuntechUIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		1AA3FA501D389E670056E52F /* UPPayPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FA511D389E670056E52F /* libUPPayPlugin.a */,
+				1AA3FA521D389E670056E52F /* UPPayPlugin.h */,
+				1AA3FA531D389E670056E52F /* UPPayPluginDelegate.h */,
+			);
+			path = UPPayPlugin;
+			sourceTree = "<group>";
+		};
+		1AA3FAE91D389F510056E52F /* iProtect */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FAEA1D389F510056E52F /* include */,
+				1AA3FAF61D389F510056E52F /* iProtectDemo */,
+				1AA3FAF81D389F510056E52F /* lib */,
+				1AA3FAFA1D389F510056E52F /* libstdc++.dylib */,
+				1AA3FAFB1D389F510056E52F /* xcconfig */,
+			);
+			path = iProtect;
+			sourceTree = "<group>";
+		};
+		1AA3FAEA1D389F510056E52F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FAEB1D389F510056E52F /* EditTextField.h */,
+				1AA3FAEC1D389F510056E52F /* iProtect.h */,
+				1AA3FAED1D389F510056E52F /* iProtectTypes.h */,
+				1AA3FAEE1D389F510056E52F /* PasswordKeyboardDelegate+VIP.h */,
+				1AA3FAEF1D389F510056E52F /* PasswordKeyboardDelegate.h */,
+				1AA3FAF01D389F510056E52F /* PasswordTextField+VIP.h */,
+				1AA3FAF11D389F510056E52F /* PasswordTextField.h */,
+				1AA3FAF21D389F510056E52F /* VXPasswordKeyboardDelegate.h */,
+				1AA3FAF31D389F510056E52F /* WebPasswordKeyboard.h */,
+				1AA3FAF41D389F510056E52F /* WebPasswordKeyboardController.h */,
+				1AA3FAF51D389F510056E52F /* WebPasswordKeyboardDelegate.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1AA3FAF61D389F510056E52F /* iProtectDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FAF71D389F510056E52F /* iProtectDemo */,
+			);
+			path = iProtectDemo;
+			sourceTree = "<group>";
+		};
+		1AA3FAF71D389F510056E52F /* iProtectDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iProtectDemo;
+			sourceTree = "<group>";
+		};
+		1AA3FAF81D389F510056E52F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FAF91D389F510056E52F /* libiProtectSDHS.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1AA3FAFB1D389F510056E52F /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FAFC1D389F510056E52F /* SDHS.xcconfig */,
+			);
+			path = xcconfig;
+			sourceTree = "<group>";
+		};
+		1AA3FB711D38A92D0056E52F /* HisuntechAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1AA3FB721D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.h */,
+				1AA3FB731D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.m */,
+				1AA3FB741D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.h */,
+				1AA3FB751D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.m */,
+				1AA3FB761D38A92D0056E52F /* HisuntechAFHTTPSessionManager.h */,
+				1AA3FB771D38A92D0056E52F /* HisuntechAFHTTPSessionManager.m */,
+				1AA3FB781D38A92D0056E52F /* HisuntechAFNetworking.h */,
+				1AA3FB791D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.h */,
+				1AA3FB7A1D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.m */,
+				1AA3FB7B1D38A92D0056E52F /* HisuntechAFSecurityPolicy.h */,
+				1AA3FB7C1D38A92D0056E52F /* HisuntechAFSecurityPolicy.m */,
+				1AA3FB7D1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.h */,
+				1AA3FB7E1D38A92D0056E52F /* HisuntechAFURLConnectionOperation.m */,
+				1AA3FB7F1D38A92D0056E52F /* HisuntechAFURLRequestSerialization.h */,
+				1AA3FB801D38A92D0056E52F /* HisuntechAFURLRequestSerialization.m */,
+				1AA3FB811D38A92D0056E52F /* HisuntechAFURLResponseSerialization.h */,
+				1AA3FB821D38A92D0056E52F /* HisuntechAFURLResponseSerialization.m */,
+				1AA3FB831D38A92D0056E52F /* HisuntechAFURLSessionManager.h */,
+				1AA3FB841D38A92D0056E52F /* HisuntechAFURLSessionManager.m */,
+			);
+			path = HisuntechAFNetworking;
+			sourceTree = "<group>";
+		};
+		1ABE65481D4C97DD00D2C278 /* HisuntechReachabliity */ = {
+			isa = PBXGroup;
+			children = (
+				1ABE65491D4C97DD00D2C278 /* HisuntechReachability.h */,
+				1ABE654A1D4C97DD00D2C278 /* HisuntechReachability.m */,
+			);
+			path = HisuntechReachabliity;
+			sourceTree = "<group>";
+		};
+		9F47D4B01A25D13000D7A747 /* 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				9F47D4B11A25D13000D7A747 /* HisuntechForgetPasswordResetingController.h */,
+				9F47D4B21A25D13000D7A747 /* HisuntechForgetPasswordResetingController.m */,
+				9F47D4B31A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.h */,
+				9F47D4B41A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.m */,
+				9F47D4B51A25D13000D7A747 /* HisuntechForgetPasswordViewController.h */,
+				9F47D4B61A25D13000D7A747 /* HisuntechForgetPasswordViewController.m */,
+				06A1C96A1B69CDBE00883987 /* IDViewController.h */,
+				06A1C96B1B69CDBE00883987 /* IDViewController.m */,
+				06A1C9701B6A103500883987 /* QuestionViewController.h */,
+				06A1C9711B6A103500883987 /* QuestionViewController.m */,
+			);
+			path = "忘记密码";
+			sourceTree = "<group>";
+		};
+		9F47D4BD1A25D14100D7A747 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9F47D4BE1A25D14100D7A747 /* dropDown */,
+				9F47D4C91A25D14100D7A747 /* HisuntechIdCardViewController.h */,
+				9F47D4CA1A25D14100D7A747 /* HisuntechIdCardViewController.m */,
+				9F47D4CC1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.m */,
+				9F47D4CB1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.h */,
+				9F47D4CD1A25D14100D7A747 /* HisuntechRegisterVerifyViewController.h */,
+				9F47D4CE1A25D14100D7A747 /* HisuntechRegisterVerifyViewController.m */,
+				9F47D4CF1A25D14100D7A747 /* HisuntechRegisterViewController.h */,
+				9F47D4D01A25D14100D7A747 /* HisuntechRegisterViewController.m */,
+				9F47D4D11A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.h */,
+				9F47D4D21A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		9F47D4BE1A25D14100D7A747 /* dropDown */ = {
+			isa = PBXGroup;
+			children = (
+				9F47D4C31A25D14100D7A747 /* HisuntechTableViewWithBlock.h */,
+				9F47D4C41A25D14100D7A747 /* HisuntechTableViewWithBlock.m */,
+				9F47D4C51A25D14100D7A747 /* UITableView+DataSourceBlocks.h */,
+				9F47D4C61A25D14100D7A747 /* UITableView+DataSourceBlocks.m */,
+				9F47D4C71A25D14100D7A747 /* UITableView+DelegateBlocks.h */,
+				9F47D4C81A25D14100D7A747 /* UITableView+DelegateBlocks.m */,
+			);
+			path = dropDown;
+			sourceTree = "<group>";
+		};
+		9FA6DF3F1A24637A00A25034 = {
+			isa = PBXGroup;
+			children = (
+				067F65FE1B6088D00022D89E /* findPayPassword */,
+				06A401BC1B5DF77E00612CDB /* PayProtocolViewController.h */,
+				06A401BD1B5DF77E00612CDB /* PayProtocolViewController.m */,
+				9F47D4BD1A25D14100D7A747 /* Register */,
+				9F47D4B01A25D13000D7A747 /* 忘记密码 */,
+				9FA6E18B1A2483AA00A25034 /* bank.plist */,
+				9FA6E18C1A2483AA00A25034 /* Images */,
+				9FA6E1B21A2483AB00A25034 /* bankNo.plist */,
+				9FA6E0551A246E3B00A25034 /* HisuntechPaySDK.h */,
+				9FA6E0561A246E3B00A25034 /* HisuntechPaySDK.m */,
+				9FA6E0471A24677300A25034 /* HisuntechBaseViewController.h */,
+				9FA6E0481A24677300A25034 /* HisuntechBaseViewController.m */,
+				9FA6E0491A24677300A25034 /* HisuntechLoginController.h */,
+				9FA6E04A1A24677300A25034 /* HisuntechLoginController.mm */,
+				9FA6E0361A24674200A25034 /* Utility */,
+				9FA6DFDA1A24672900A25034 /* ThirdPart */,
+				9FA6DFD01A24671400A25034 /* Models */,
+				9FA6DFA71A24660800A25034 /* MixPayController */,
+				9FA6DF8E1A24654200A25034 /* QuickPayController */,
+				9FA6DF871A24651600A25034 /* PayResultController */,
+				9FA6DF831A2464F700A25034 /* AccountPayController */,
+				9FA6DF711A2464D000A25034 /* Custom */,
+				9FA6DF4D1A24637A00A25034 /* hisuntechSdk */,
+				9FA6DF611A24637A00A25034 /* hisuntechSdkTests */,
+				9FA6DF4A1A24637A00A25034 /* Frameworks */,
+				9FA6DF491A24637A00A25034 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FA6DF491A24637A00A25034 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF481A24637A00A25034 /* libhisuntechSdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FA6DF4A1A24637A00A25034 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0693975F1BFEC20500013236 /* libstdc++.dylib */,
+				9FA6E0531A246A6C00A25034 /* Security.framework */,
+				9FA6E0511A246A5F00A25034 /* SystemConfiguration.framework */,
+				9FA6E04D1A2467CD00A25034 /* UIKit.framework */,
+				9FA6DF4B1A24637A00A25034 /* Foundation.framework */,
+				9FA6DF591A24637A00A25034 /* XCTest.framework */,
+				9FA6DF5C1A24637A00A25034 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FA6DF4D1A24637A00A25034 /* hisuntechSdk */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF4E1A24637A00A25034 /* Supporting Files */,
+			);
+			path = hisuntechSdk;
+			sourceTree = "<group>";
+		};
+		9FA6DF4E1A24637A00A25034 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF4F1A24637A00A25034 /* hisuntechSdk-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FA6DF611A24637A00A25034 /* hisuntechSdkTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF671A24637A00A25034 /* hisuntechSdkTests.m */,
+				9FA6DF621A24637A00A25034 /* Supporting Files */,
+			);
+			path = hisuntechSdkTests;
+			sourceTree = "<group>";
+		};
+		9FA6DF621A24637A00A25034 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF631A24637A00A25034 /* hisuntechSdkTests-Info.plist */,
+				9FA6DF641A24637A00A25034 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FA6DF711A2464D000A25034 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9F47D4E61A25D17A00D7A747 /* HisuntechNormalTextField.h */,
+				9F47D4E71A25D17A00D7A747 /* HisuntechNormalTextField.m */,
+				9F47D4E81A25D17A00D7A747 /* HisuntechPooCodeView.h */,
+				9F47D4E91A25D17A00D7A747 /* HisuntechPooCodeView.m */,
+				9FA6DF721A2464D000A25034 /* HisuntechCustomAlertView.h */,
+				9FA6DF731A2464D000A25034 /* HisuntechCustomAlertView.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9FA6DF831A2464F700A25034 /* AccountPayController */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF841A2464F700A25034 /* HisuntechAccountPayController.h */,
+				9FA6DF851A2464F700A25034 /* HisuntechAccountPayController.m */,
+			);
+			path = AccountPayController;
+			sourceTree = "<group>";
+		};
+		9FA6DF871A24651600A25034 /* PayResultController */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF881A24652E00A25034 /* HisuntechPayFailedViewController.h */,
+				9FA6DF891A24652E00A25034 /* HisuntechPayFailedViewController.m */,
+				9FA6DF8A1A24652E00A25034 /* HisuntechPaySucceedController.h */,
+				9FA6DF8B1A24652E00A25034 /* HisuntechPaySucceedController.m */,
+			);
+			name = PayResultController;
+			sourceTree = "<group>";
+		};
+		9FA6DF8E1A24654200A25034 /* QuickPayController */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF941A24658A00A25034 /* HisuntechBNDelegate.h */,
+				9FA6DF951A24658A00A25034 /* HisuntechAddCreditCardController.h */,
+				9FA6DF961A24658A00A25034 /* HisuntechAddCreditCardController.m */,
+				9FA6DF971A24658A00A25034 /* HisuntechAddDebitCardController.h */,
+				9FA6DF981A24658A00A25034 /* HisuntechAddDebitCardController.m */,
+				9FA6DF9D1A24658A00A25034 /* HisuntechBankController.h */,
+				9FA6DF9E1A24658A00A25034 /* HisuntechBankController.m */,
+				9FA6DF9F1A24658A00A25034 /* HisuntechBgView.h */,
+				9FA6DFA01A24658A00A25034 /* HisuntechBgView.m */,
+				9FA6DF8F1A24657B00A25034 /* BankCell */,
+			);
+			name = QuickPayController;
+			sourceTree = "<group>";
+		};
+		9FA6DF8F1A24657B00A25034 /* BankCell */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DF901A24657B00A25034 /* HisuntechBankCell.h */,
+				9FA6DF911A24657B00A25034 /* HisuntechBankCell.m */,
+			);
+			path = BankCell;
+			sourceTree = "<group>";
+		};
+		9FA6DFA71A24660800A25034 /* MixPayController */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DFCD1A24670400A25034 /* HisuntechMixPayViewController.h */,
+				9FA6DFCE1A24670400A25034 /* HisuntechMixPayViewController.mm */,
+				9FA6DFA81A2466CA00A25034 /* MixPayCell */,
+			);
+			name = MixPayController;
+			sourceTree = "<group>";
+		};
+		9FA6DFA81A2466CA00A25034 /* MixPayCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1364C1B27E64A0093D196 /* HisuntechBankPayViewCell.h */,
+				0BD1364D1B27E64A0093D196 /* HisuntechBankPayViewCell.m */,
+				9FA6DFA91A2466ED00A25034 /* HisuntechAccountPayCell.h */,
+				9FA6DFAA1A2466ED00A25034 /* HisuntechAccountPayCell.m */,
+				9FA6DFAB1A2466ED00A25034 /* HisuntechOrderMoneyCell.h */,
+				9FA6DFAC1A2466ED00A25034 /* HisuntechPayPwdCell.h */,
+				9FA6DFAD1A2466ED00A25034 /* HisuntechOrderMoneyCell.m */,
+				9FA6DFAE1A2466ED00A25034 /* HisuntechPayPwdCell.m */,
+				9FA6DFAF1A2466ED00A25034 /* HisuntechQuickCreditPayCell.h */,
+				9FA6DFB01A2466ED00A25034 /* HisuntechQuickCreditPayCell.m */,
+				9FA6DFB11A2466ED00A25034 /* HisuntechQuickDebitPayCell.h */,
+				9FA6DFB21A2466ED00A25034 /* HisuntechQuickDebitPayCell.m */,
+				9FA6DFB31A2466ED00A25034 /* HisuntechQuickPayItemCell.h */,
+				9FA6DFB41A2466ED00A25034 /* HisuntechQuickPayItemCell.m */,
+				9FA6DFB51A2466ED00A25034 /* HisuntechQuickPayMoneyCell.h */,
+				9FA6DFB61A2466ED00A25034 /* HisuntechQuickPayMoneyCell.m */,
+				9FA6DFB71A2466ED00A25034 /* HisuntechSurePayCell.h */,
+				9FA6DFB81A2466ED00A25034 /* HisuntechSurePayCell.m */,
+				9FA6DFB91A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.h */,
+				9FA6DFBA1A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.m */,
+				9FA6DFBB1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.h */,
+				9FA6DFBC1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.m */,
+				9FA6DFBD1A2466ED00A25034 /* HisuntechBankCellView.h */,
+				9FA6DFBE1A2466ED00A25034 /* HisuntechBankCellView.m */,
+				9FA6DFBF1A2466ED00A25034 /* HisuntechAddView.h */,
+				9FA6DFC01A2466ED00A25034 /* HisuntechAddView.m */,
+			);
+			name = MixPayCell;
+			sourceTree = "<group>";
+		};
+		9FA6DFD01A24671400A25034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6DFD11A24671400A25034 /* HisuntechBuildJsonString.h */,
+				9FA6DFD21A24671400A25034 /* HisuntechBuildJsonString.m */,
+				9FA6DFD31A24671400A25034 /* HisuntechOrderEntity.h */,
+				9FA6DFD41A24671400A25034 /* HisuntechOrderEntity.m */,
+				9FA6DFD51A24671400A25034 /* HisuntechUserEntity.h */,
+				9FA6DFD61A24671400A25034 /* HisuntechUserEntity.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FA6DFDA1A24672900A25034 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				1ABE65481D4C97DD00D2C278 /* HisuntechReachabliity */,
+				1AA3FB711D38A92D0056E52F /* HisuntechAFNetworking */,
+				1AA3FAE91D389F510056E52F /* iProtect */,
+				1AA3F9F11D389E670056E52F /* HisuntechIQKeyBoardManager */,
+				1AA3FA0B1D389E670056E52F /* HisuntechUIColor */,
+				1AA3FA101D389E670056E52F /* HisuntechUIKit+AFNetworking */,
+				1AA3FA501D389E670056E52F /* UPPayPlugin */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		9FA6E0361A24674200A25034 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9FA6E0391A24674200A25034 /* HisuntechConstant.h */,
+				9FA6E03A1A24674200A25034 /* HisuntechConvert.h */,
+				9FA6E03B1A24674200A25034 /* HisuntechConvert.m */,
+				9FA6E03C1A24674200A25034 /* HisuntechLoadingView.h */,
+				9FA6E03D1A24674200A25034 /* HisuntechLoadingView.m */,
+				9FA6E03E1A24674200A25034 /* HisunTechTools.h */,
+				9FA6E03F1A24674200A25034 /* HisunTechTools.m */,
+				9FA6E0401A24674200A25034 /* HisuntechValidateCheck.h */,
+				9FA6E0411A24674200A25034 /* HisuntechValidateCheck.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9FA6E18C1A2483AA00A25034 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				06F8EB1E1B3045A400D384DE /* bg_checkbox_yinlian.png */,
+				9FA6E18D1A2483AB00A25034 /* back_btn_n@2x.png */,
+				9FA6E18E1A2483AB00A25034 /* bank2_ic.png */,
+				9FA6E18F1A2483AB00A25034 /* bank_fund.png */,
+				9FA6E1901A2483AB00A25034 /* blackArrow.png */,
+				9FA6E1911A2483AB00A25034 /* blackArrow@2x.png */,
+				9FA6E1921A2483AB00A25034 /* blueArrow.png */,
+				9FA6E1931A2483AB00A25034 /* blueArrow@2x.png */,
+				9FA6E1941A2483AB00A25034 /* choicebox_btn_n@2x.png */,
+				9FA6E1951A2483AB00A25034 /* circle_ic@2x.png */,
+				9FA6E1961A2483AB00A25034 /* coupon_1@2x.png */,
+				9FA6E1971A2483AB00A25034 /* coupon_2@2x.png */,
+				9FA6E1981A2483AB00A25034 /* coupon_3@2x.png */,
+				9FA6E1991A2483AB00A25034 /* coupon_4@2x.png */,
+				9FA6E19A1A2483AB00A25034 /* credit card_ic@2x.png */,
+				9FA6E19B1A2483AB00A25034 /* grayArrow.png */,
+				9FA6E19C1A2483AB00A25034 /* grayArrow@2x.png */,
+				9FA6E19D1A2483AB00A25034 /* h_line.png */,
+				9FA6E19E1A2483AB00A25034 /* index_icon_bg.png */,
+				9FA6E19F1A2483AB00A25034 /* login_btn_n.9@2x.png */,
+				9FA6E1A01A2483AB00A25034 /* password_ic@2x.png */,
+				9FA6E1A11A2483AB00A25034 /* pay fail_ic@2x.png */,
+				9FA6E1A21A2483AB00A25034 /* pay succeed_ic@2x.png */,
+				9FA6E1A31A2483AB00A25034 /* pay_bg.png */,
+				9FA6E1A41A2483AB00A25034 /* pull_down_btn@2x.png */,
+				9FA6E1A51A2483AB00A25034 /* pull_right_btn@2x.png */,
+				9FA6E1A61A2483AB00A25034 /* pull_up_btn@2x.png */,
+				9FA6E1A71A2483AB00A25034 /* red packet_choicebox_ic@2x.png */,
+				9FA6E1A81A2483AB00A25034 /* red packet_choicebox_ic_n@2x.png */,
+				9FA6E1A91A2483AB00A25034 /* red-packet_ic@2x.png */,
+				9FA6E1AA1A2483AB00A25034 /* refresh_arrow.png */,
+				9FA6E1AB1A2483AB00A25034 /* refresh_arrow@2x.png */,
+				9FA6E1AC1A2483AB00A25034 /* tag_ic@2x.png */,
+				9FA6E1AD1A2483AB00A25034 /* username_ic@2x.png */,
+				9FA6E1AE1A2483AB00A25034 /* visa_ic@2x.png */,
+				9FA6E1AF1A2483AB00A25034 /* wallet_ic@2x.png */,
+				9FA6E1B01A2483AB00A25034 /* whiteArrow.png */,
+				9FA6E1B11A2483AB00A25034 /* whiteArrow@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9F4A1EBE1A26D64700FD34B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA3FA901D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.h in Headers */,
+				9F4A1EBF1A26D65700FD34B1 /* HisuntechPaySDK.h in Headers */,
+				9F4A1EC11A26D6B700FD34B1 /* HisuntechLoginController.h in Headers */,
+				0680D2141BAA9940009B89DA /* HisuntechMixPayViewController.h in Headers */,
+				1AA3FA891D389E670056E52F /* HisuntechUIButton+AFNetworking.h in Headers */,
+				1AA3FB9C1D38A92D0056E52F /* HisuntechAFHTTPSessionManager.h in Headers */,
+				9F4A1EC01A26D6A600FD34B1 /* HisuntechBaseViewController.h in Headers */,
+				1AA3FB9F1D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.h in Headers */,
+				1AA3FAFE1D389F510056E52F /* iProtect.h in Headers */,
+				1AA3FA921D389E670056E52F /* HisuntechUIWebView+AFNetworking.h in Headers */,
+				1AA3FA741D389E670056E52F /* HisuntechKeyboardManager.h in Headers */,
+				1AA3FA721D389E670056E52F /* HisuntechIQToolbar.h in Headers */,
+				1AA3FB061D389F510056E52F /* WebPasswordKeyboardController.h in Headers */,
+				1AA3FB041D389F510056E52F /* VXPasswordKeyboardDelegate.h in Headers */,
+				1AA3FA791D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.h in Headers */,
+				1AA3FB031D389F510056E52F /* PasswordTextField.h in Headers */,
+				1AA3FB011D389F510056E52F /* PasswordKeyboardDelegate.h in Headers */,
+				06A1C96C1B69CDBE00883987 /* IDViewController.h in Headers */,
+				1AA3FA6C1D389E670056E52F /* HisuntechIQSegmentedNextPrevious.h in Headers */,
+				067F660A1B60D4BA0022D89E /* captchaController.h in Headers */,
+				1AA3FAFF1D389F510056E52F /* iProtectTypes.h in Headers */,
+				1AA3FB9E1D38A92D0056E52F /* HisuntechAFNetworking.h in Headers */,
+				1AA3FB981D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.h in Headers */,
+				1AA3FBA51D38A92D0056E52F /* HisuntechAFURLRequestSerialization.h in Headers */,
+				067F660E1B60D8DD0022D89E /* GetPayPasswordViewController.h in Headers */,
+				1AA3FA6A1D389E670056E52F /* HisuntechIQKeyboardManagerConstants.h in Headers */,
+				1AA3FA8E1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.h in Headers */,
+				06A1C9721B6A103500883987 /* QuestionViewController.h in Headers */,
+				067F66051B60CDC90022D89E /* validatePhoneController.h in Headers */,
+				1AA3FAC11D389E670056E52F /* UPPayPluginDelegate.h in Headers */,
+				1AA3FA811D389E670056E52F /* HisuntechUIColor+YUColor.h in Headers */,
+				1AA3FBA91D38A92D0056E52F /* HisuntechAFURLSessionManager.h in Headers */,
+				1AA3FA681D389E670056E52F /* HisuntechIQKeyboardManager.h in Headers */,
+				065C9A211B8FE64800EA83AF /* payPasswordReslutViewController.h in Headers */,
+				1AA3FA7B1D389E670056E52F /* HisuntechUIWindow+Hierarchy.h in Headers */,
+				1AA3FAC01D389E670056E52F /* UPPayPlugin.h in Headers */,
+				1AA3FB051D389F510056E52F /* WebPasswordKeyboard.h in Headers */,
+				1AA3FA6E1D389E670056E52F /* HisuntechIQTextView.h in Headers */,
+				1AA3FA871D389E670056E52F /* HisuntechUIAlertView+AFNetworking.h in Headers */,
+				1AA3FA7F1D389E670056E52F /* HisuntechColor.h in Headers */,
+				1AA3FA831D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.h in Headers */,
+				067F66011B6088D00022D89E /* retrievePayPwdController.h in Headers */,
+				1AA3FAFD1D389F510056E52F /* EditTextField.h in Headers */,
+				067F66121B60D92B0022D89E /* resetPasswordController.h in Headers */,
+				1AA3FA8D1D389E670056E52F /* HisuntechUIKit+AFNetworking.h in Headers */,
+				1AA3FA701D389E670056E52F /* HisuntechIQTitleBarButtonItem.h in Headers */,
+				1AA3FA8B1D389E670056E52F /* HisuntechUIImageView+AFNetworking.h in Headers */,
+				1AA3FA751D389E670056E52F /* HisuntechNSArray+Sort.h in Headers */,
+				1AA3FBA71D38A92D0056E52F /* HisuntechAFURLResponseSerialization.h in Headers */,
+				1ABE654B1D4C97DD00D2C278 /* HisuntechReachability.h in Headers */,
+				1AA3FB9A1D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.h in Headers */,
+				1AA3FBA11D38A92D0056E52F /* HisuntechAFSecurityPolicy.h in Headers */,
+				1AA3FB021D389F510056E52F /* PasswordTextField+VIP.h in Headers */,
+				1AA3FB001D389F510056E52F /* PasswordKeyboardDelegate+VIP.h in Headers */,
+				1AA3FA6B1D389E670056E52F /* HisuntechIQKeyboardManagerConstantsInternal.h in Headers */,
+				1AA3FA771D389E670056E52F /* HisuntechUIView+Hierarchy.h in Headers */,
+				0BD1364E1B27E64A0093D196 /* HisuntechBankPayViewCell.h in Headers */,
+				1AA3FBA31D38A92D0056E52F /* HisuntechAFURLConnectionOperation.h in Headers */,
+				1AA3FB071D389F510056E52F /* WebPasswordKeyboardDelegate.h in Headers */,
+				06A401BE1B5DF77E00612CDB /* PayProtocolViewController.h in Headers */,
+				1AA3FA851D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9FA6DF471A24637A00A25034 /* hisuntechSdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA6DF6B1A24637A00A25034 /* Build configuration list for PBXNativeTarget "hisuntechSdk" */;
+			buildPhases = (
+				9FA6DF441A24637A00A25034 /* Sources */,
+				9FA6DF451A24637A00A25034 /* Frameworks */,
+				9FA6DF461A24637A00A25034 /* Copy Files */,
+				9FA6E0AE1A247BA200A25034 /* Resources */,
+				9F4A1EBE1A26D64700FD34B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hisuntechSdk;
+			productName = hisuntechSdk;
+			productReference = 9FA6DF481A24637A00A25034 /* libhisuntechSdk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FA6DF401A24637A00A25034 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = com.hisuntech;
+			};
+			buildConfigurationList = 9FA6DF431A24637A00A25034 /* Build configuration list for PBXProject "hisuntechSdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9FA6DF3F1A24637A00A25034;
+			productRefGroup = 9FA6DF491A24637A00A25034 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FA6DF471A24637A00A25034 /* hisuntechSdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FA6E0AE1A247BA200A25034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA6E1BC1A2483AB00A25034 /* circle_ic@2x.png in Resources */,
+				9FA6E1C71A2483AB00A25034 /* password_ic@2x.png in Resources */,
+				9FA6E1BA1A2483AB00A25034 /* blueArrow@2x.png in Resources */,
+				9FA6E1D71A2483AB00A25034 /* whiteArrow.png in Resources */,
+				9FA6E1BB1A2483AB00A25034 /* choicebox_btn_n@2x.png in Resources */,
+				9FA6E1B61A2483AB00A25034 /* bank_fund.png in Resources */,
+				9FA6E1BF1A2483AB00A25034 /* coupon_3@2x.png in Resources */,
+				9FA6E1C51A2483AB00A25034 /* index_icon_bg.png in Resources */,
+				1AA3FB0A1D389F510056E52F /* SDHS.xcconfig in Resources */,
+				9FA6E1BD1A2483AB00A25034 /* coupon_1@2x.png in Resources */,
+				9FA6E1B31A2483AB00A25034 /* bank.plist in Resources */,
+				9FA6E1B81A2483AB00A25034 /* blackArrow@2x.png in Resources */,
+				9FA6E1D21A2483AB00A25034 /* refresh_arrow@2x.png in Resources */,
+				9FA6E1C41A2483AB00A25034 /* h_line.png in Resources */,
+				9FA6E1CD1A2483AB00A25034 /* pull_up_btn@2x.png in Resources */,
+				9FA6E1C91A2483AB00A25034 /* pay succeed_ic@2x.png in Resources */,
+				9FA6E1B71A2483AB00A25034 /* blackArrow.png in Resources */,
+				9FA6E1CB1A2483AB00A25034 /* pull_down_btn@2x.png in Resources */,
+				9FA6E1C01A2483AB00A25034 /* coupon_4@2x.png in Resources */,
+				9FA6E1CE1A2483AB00A25034 /* red packet_choicebox_ic@2x.png in Resources */,
+				9FA6E1D31A2483AB00A25034 /* tag_ic@2x.png in Resources */,
+				9FA6E1D11A2483AB00A25034 /* refresh_arrow.png in Resources */,
+				9FA6E1B91A2483AB00A25034 /* blueArrow.png in Resources */,
+				06F8EB1F1B3045A400D384DE /* bg_checkbox_yinlian.png in Resources */,
+				9FA6E1C61A2483AB00A25034 /* login_btn_n.9@2x.png in Resources */,
+				9FA6E1D91A2483AB00A25034 /* bankNo.plist in Resources */,
+				9FA6E1BE1A2483AB00A25034 /* coupon_2@2x.png in Resources */,
+				9FA6E1B41A2483AB00A25034 /* back_btn_n@2x.png in Resources */,
+				9FA6E1C11A2483AB00A25034 /* credit card_ic@2x.png in Resources */,
+				9FA6E1C21A2483AB00A25034 /* grayArrow.png in Resources */,
+				9FA6E1D41A2483AB00A25034 /* username_ic@2x.png in Resources */,
+				9FA6E1D81A2483AB00A25034 /* whiteArrow@2x.png in Resources */,
+				9FA6E1B51A2483AB00A25034 /* bank2_ic.png in Resources */,
+				9FA6E1D01A2483AB00A25034 /* red-packet_ic@2x.png in Resources */,
+				9FA6E1D61A2483AB00A25034 /* wallet_ic@2x.png in Resources */,
+				9FA6E1C81A2483AB00A25034 /* pay fail_ic@2x.png in Resources */,
+				9FA6E1CF1A2483AB00A25034 /* red packet_choicebox_ic_n@2x.png in Resources */,
+				1AA3FA671D389E670056E52F /* HisuntechIQKeyboardManager.bundle in Resources */,
+				9FA6E1C31A2483AB00A25034 /* grayArrow@2x.png in Resources */,
+				9FA6E1D51A2483AB00A25034 /* visa_ic@2x.png in Resources */,
+				9FA6E1CA1A2483AB00A25034 /* pay_bg.png in Resources */,
+				9FA6E1CC1A2483AB00A25034 /* pull_right_btn@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FA6DF441A24637A00A25034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA3FA8C1D389E670056E52F /* HisuntechUIImageView+AFNetworking.m in Sources */,
+				1AA3FA761D389E670056E52F /* HisuntechNSArray+Sort.m in Sources */,
+				9FA6DFC21A2466ED00A25034 /* HisuntechOrderMoneyCell.m in Sources */,
+				1AA3FBA41D38A92D0056E52F /* HisuntechAFURLConnectionOperation.m in Sources */,
+				1AA3FA911D389E670056E52F /* HisuntechUIRefreshControl+AFNetworking.m in Sources */,
+				9FA6E04B1A24677300A25034 /* HisuntechBaseViewController.m in Sources */,
+				9FA6DFC41A2466ED00A25034 /* HisuntechQuickCreditPayCell.m in Sources */,
+				1AA3FA861D389E670056E52F /* HisuntechUIActivityIndicatorView+AFNetworking.m in Sources */,
+				065C9A221B8FE64800EA83AF /* payPasswordReslutViewController.m in Sources */,
+				067F66021B6088D00022D89E /* retrievePayPwdController.m in Sources */,
+				9FA6DFC31A2466ED00A25034 /* HisuntechPayPwdCell.m in Sources */,
+				9FA6E0441A24674200A25034 /* HisuntechLoadingView.m in Sources */,
+				1AA3FA6F1D389E670056E52F /* HisuntechIQTextView.m in Sources */,
+				9FA6DFA11A24658A00A25034 /* HisuntechAddCreditCardController.m in Sources */,
+				9F47D4D71A25D14100D7A747 /* HisuntechTableViewWithBlock.m in Sources */,
+				1AA3FA781D389E670056E52F /* HisuntechUIView+Hierarchy.m in Sources */,
+				9FA6DFC11A2466ED00A25034 /* HisuntechAccountPayCell.m in Sources */,
+				067F66061B60CDC90022D89E /* validatePhoneController.m in Sources */,
+				9FA6DF861A2464F700A25034 /* HisuntechAccountPayController.m in Sources */,
+				9F47D4E11A25D14100D7A747 /* HisuntechRegisterVerifyViewController.m in Sources */,
+				067F660B1B60D4BA0022D89E /* captchaController.m in Sources */,
+				06A1C9731B6A103500883987 /* QuestionViewController.m in Sources */,
+				9FA6E0431A24674200A25034 /* HisuntechConvert.m in Sources */,
+				9F47D4EB1A25D17A00D7A747 /* HisuntechNormalTextField.m in Sources */,
+				9F47D4D91A25D14100D7A747 /* UITableView+DataSourceBlocks.m in Sources */,
+				1AA3FA711D389E670056E52F /* HisuntechIQTitleBarButtonItem.m in Sources */,
+				1AA3FA731D389E670056E52F /* HisuntechIQToolbar.m in Sources */,
+				9FA6DFD81A24671400A25034 /* HisuntechOrderEntity.m in Sources */,
+				1AA3FBAA1D38A92D0056E52F /* HisuntechAFURLSessionManager.m in Sources */,
+				9F47D4DF1A25D14100D7A747 /* HisuntechRegisterSettingPasswordViewController.m in Sources */,
+				06A401BF1B5DF77E00612CDB /* PayProtocolViewController.m in Sources */,
+				9FA6DFC61A2466ED00A25034 /* HisuntechQuickPayItemCell.m in Sources */,
+				9FA6DFA51A24658A00A25034 /* HisuntechBankController.m in Sources */,
+				9FA6E0461A24674200A25034 /* HisuntechValidateCheck.m in Sources */,
+				9FA6DFC71A2466ED00A25034 /* HisuntechQuickPayMoneyCell.m in Sources */,
+				1AA3FA8A1D389E670056E52F /* HisuntechUIButton+AFNetworking.m in Sources */,
+				1AA3FA7A1D389E670056E52F /* HisuntechUIView+IQKeyboardToolbar.m in Sources */,
+				9F47D4ED1A25D17A00D7A747 /* HisuntechPooCodeView.m in Sources */,
+				9FA6DFA61A24658A00A25034 /* HisuntechBgView.m in Sources */,
+				9F47D4BC1A25D13000D7A747 /* HisuntechForgetPasswordViewController.m in Sources */,
+				9FA6DF8C1A24652E00A25034 /* HisuntechPayFailedViewController.m in Sources */,
+				9FA6DFCA1A2466ED00A25034 /* HisuntechQuickDebitPayViewCell.m in Sources */,
+				9FA6DF931A24657B00A25034 /* HisuntechBankCell.m in Sources */,
+				1AA3FBA81D38A92D0056E52F /* HisuntechAFURLResponseSerialization.m in Sources */,
+				9FA6DFD91A24671400A25034 /* HisuntechUserEntity.m in Sources */,
+				9FA6DF741A2464D000A25034 /* HisuntechCustomAlertView.m in Sources */,
+				9FA6E0451A24674200A25034 /* HisunTechTools.m in Sources */,
+				067F660F1B60D8DD0022D89E /* GetPayPasswordViewController.m in Sources */,
+				1AA3FA691D389E670056E52F /* HisuntechIQKeyboardManager.m in Sources */,
+				9F47D4DB1A25D14100D7A747 /* UITableView+DelegateBlocks.m in Sources */,
+				1AA3FA821D389E670056E52F /* HisuntechUIColor+YUColor.m in Sources */,
+				9FA6DF8D1A24652E00A25034 /* HisuntechPaySucceedController.m in Sources */,
+				9F47D4E51A25D14100D7A747 /* HisuntechSettingPayPasswordViewController.m in Sources */,
+				0BD1364F1B27E64A0093D196 /* HisuntechBankPayViewCell.m in Sources */,
+				9F47D4E31A25D14100D7A747 /* HisuntechRegisterViewController.m in Sources */,
+				1AA3FA6D1D389E670056E52F /* HisuntechIQSegmentedNextPrevious.m in Sources */,
+				1AA3FBA21D38A92D0056E52F /* HisuntechAFSecurityPolicy.m in Sources */,
+				9FA6E04C1A24677300A25034 /* HisuntechLoginController.mm in Sources */,
+				9FA6DFCF1A24670400A25034 /* HisuntechMixPayViewController.mm in Sources */,
+				1AA3FB9D1D38A92D0056E52F /* HisuntechAFHTTPSessionManager.m in Sources */,
+				9FA6DFC81A2466ED00A25034 /* HisuntechSurePayCell.m in Sources */,
+				9F47D4B81A25D13000D7A747 /* HisuntechForgetPasswordResetingController.m in Sources */,
+				9FA6E0571A246E3B00A25034 /* HisuntechPaySDK.m in Sources */,
+				1AA3FB9B1D38A92D0056E52F /* HisuntechAFHTTPRequestOperationManager.m in Sources */,
+				1AA3FBA61D38A92D0056E52F /* HisuntechAFURLRequestSerialization.m in Sources */,
+				1AA3FA841D389E670056E52F /* HisuntechAFNetworkActivityIndicatorManager.m in Sources */,
+				9FA6DFC91A2466ED00A25034 /* HisuntechQuickCreditPayViewCell.m in Sources */,
+				06A1C96D1B69CDBE00883987 /* IDViewController.m in Sources */,
+				9FA6DFC51A2466ED00A25034 /* HisuntechQuickDebitPayCell.m in Sources */,
+				1AA3FA8F1D389E670056E52F /* HisuntechUIProgressView+AFNetworking.m in Sources */,
+				1AA3FA881D389E670056E52F /* HisuntechUIAlertView+AFNetworking.m in Sources */,
+				1AA3FA931D389E670056E52F /* HisuntechUIWebView+AFNetworking.m in Sources */,
+				9F47D4BA1A25D13000D7A747 /* HisuntechForgetPasswordVerifyController.m in Sources */,
+				9FA6DFA21A24658A00A25034 /* HisuntechAddDebitCardController.m in Sources */,
+				1AA3FB991D38A92D0056E52F /* HisuntechAFHTTPRequestOperation.m in Sources */,
+				9FA6DFCC1A2466ED00A25034 /* HisuntechAddView.m in Sources */,
+				9FA6DFCB1A2466ED00A25034 /* HisuntechBankCellView.m in Sources */,
+				067F66131B60D92B0022D89E /* resetPasswordController.m in Sources */,
+				1ABE654C1D4C97DD00D2C278 /* HisuntechReachability.m in Sources */,
+				1AA3FA7C1D389E670056E52F /* HisuntechUIWindow+Hierarchy.m in Sources */,
+				1AA3FBA01D38A92D0056E52F /* HisuntechAFNetworkReachabilityManager.m in Sources */,
+				1AA3FA801D389E670056E52F /* HisuntechColor.m in Sources */,
+				9F47D4DD1A25D14100D7A747 /* HisuntechIdCardViewController.m in Sources */,
+				9FA6DFD71A24671400A25034 /* HisuntechBuildJsonString.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FA6DF641A24637A00A25034 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FA6DF651A24637A00A25034 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FA6DF691A24637A00A25034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9FA6DF6A1A24637A00A25034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FA6DF6C1A24637A00A25034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/hisuntechSdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hisuntechSdk/hisuntechSdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/ThirdPart/UPPayPlugin",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSecurity/lib",
+					"$(PROJECT_DIR)/ThirdPart/iSecurity/lib",
+					"$(PROJECT_DIR)/ThirdPart/UPPayPlugin",
+					"$(PROJECT_DIR)/ThirdPart/HisuntechUPPayPlugin",
+					"$(PROJECT_DIR)/山东高速集成",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdPart/iProtect/lib",
+					"$(PROJECT_DIR)/ThirdPart/iProtect",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DE_SDHS_DUAL_PLATFORM=55",
+					"-DE_SDHS_STANDARD=59",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/ThirdPart/UPPayPlugin/libUPPayPlugin.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		9FA6DF6D1A24637A00A25034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/hisuntechSdk.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hisuntechSdk/hisuntechSdk-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/ThirdPart/UPPayPlugin",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSecurity/lib",
+					"$(PROJECT_DIR)/ThirdPart/iSecurity/lib",
+					"$(PROJECT_DIR)/ThirdPart/UPPayPlugin",
+					"$(PROJECT_DIR)/ThirdPart/HisuntechUPPayPlugin",
+					"$(PROJECT_DIR)/山东高速集成",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdPart/iProtect/lib",
+					"$(PROJECT_DIR)/ThirdPart/iProtect",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DE_SDHS_DUAL_PLATFORM=55",
+					"-DE_SDHS_STANDARD=59",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/ThirdPart/UPPayPlugin/libUPPayPlugin.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FA6DF431A24637A00A25034 /* Build configuration list for PBXProject "hisuntechSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA6DF691A24637A00A25034 /* Debug */,
+				9FA6DF6A1A24637A00A25034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA6DF6B1A24637A00A25034 /* Build configuration list for PBXNativeTarget "hisuntechSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA6DF6C1A24637A00A25034 /* Debug */,
+				9FA6DF6D1A24637A00A25034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FA6DF401A24637A00A25034 /* Project object */;
+}

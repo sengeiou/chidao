@@ -1,0 +1,185 @@
+//
+//  RegisterSettingPasswordViewController.m
+//  HisunPay
+//
+//  Created by scofield on 14-11-3.
+//  Copyright (c) 2014年 com.hisuntech. All rights reserved.
+//
+
+#import "HisuntechRegisterSettingPasswordViewController.h"
+#import "HisuntechSettingPayPasswordViewController.h"
+#import "iSecurity.h"
+#import "HisuntechNormalTextField.h"
+#import "HisuntechUserEntity.h"
+#import "HisuntechUIColor+YUColor.h"
+@interface HisuntechRegisterSettingPasswordViewController ()<UITextFieldDelegate>
+
+@property (nonatomic,strong) PasswordTextField *firstPW;
+@property (nonatomic,strong) PasswordTextField *secondPW;
+
+@end
+
+@implementation HisuntechRegisterSettingPasswordViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setLeftItemToBack];
+    self.navigationController.navigationBarHidden = NO;
+    
+    self.title = @"注册";
+    self.view.backgroundColor = kColor(225, 235, 239, 1);
+    self.firstPW = [[PasswordTextField alloc]initWithFrame:CGRectMake(0,  64+30 ,screenWidth , 50)usingPasswordKeyboard:YES];
+    self.firstPW.accepts = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]+$";
+    self.firstPW.delegate = self;
+    self.firstPW.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.firstPW.kbdRandom = YES;
+    self.firstPW.backgroundColor = [UIColor whiteColor];
+    self.firstPW.placeholder = @"  输入登录密码";
+    [self.view addSubview:self.firstPW];
+    
+    UILabel *requsetLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, screenWidth, 30)];
+    requsetLabel.textColor = kColor(112, 117, 120, 1);
+    requsetLabel.font = [UIFont boldSystemFontOfSize:13];
+    requsetLabel.text = @"  登录密码由8-16位英文字母、数字组成";
+    [self.view addSubview:requsetLabel];
+    
+    self.secondPW = [[PasswordTextField alloc]initWithFrame:CGRectMake(0, self.firstPW.frame.origin.y + self.firstPW.frame.size.height+1, screenWidth, 50) usingPasswordKeyboard:YES];
+    self.secondPW.backgroundColor = [UIColor whiteColor];
+    self.secondPW.accepts = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]+$";
+    self.secondPW.delegate = self;
+    self.secondPW.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.secondPW.placeholder = @"  确认登录密码";
+    self.secondPW.encryptionPlatformPublicKey = [HisuntechUserEntity Instance].pubKey;
+    self.secondPW.kbdRandom = YES;
+    self.secondPW.encryptType = E_SDHS_DUAL_PLATFORM;
+    [self.view addSubview:self.secondPW];
+    
+    UIButton *submit = [UIButton buttonWithType:UIButtonTypeCustom];
+    [submit setTitle:@"提交" forState:UIControlStateNormal];
+    [submit.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+//    NSString * imagePath = ResourcePath(@"login_btn_n.9.png") ;
+//    [submit setBackgroundImage:[UIImage imageWithContentsOfFile:imagePath] forState:UIControlStateNormal];
+    [submit setBackgroundColor:[UIColor colorWithHexString:@"41b886" withAlpha:1]];
+    submit.layer.cornerRadius = 4;
+    submit.clipsToBounds = YES;
+    [submit addTarget:self action:@selector(submitPassword) forControlEvents:UIControlEventTouchUpInside];
+    CGRect frame =  self.secondPW.frame;
+    submit.frame = CGRectMake((screenWidth - 300)/2, frame.size.height + frame.origin.y + 30, 300, 40);
+    [self.view addSubview:submit];
+}
+
+- (void)submitPassword
+{
+
+    if ([self.firstPW getLength]==0 || [self.secondPW getLength]==0) {
+        [self toastResult:@"输入内容不能为空"];
+        return;
+    }
+    if (([self.firstPW getLength]>0 && [self.firstPW getLength]<8) || ([self.secondPW getLength]>0 && [self.secondPW getLength]<8)) {
+        [self toastResult:@"密码长度不能小于8位"];
+        return;
+    }
+    
+    if (![[self.secondPW getMeasureValue] isEqual:[self.firstPW getMeasureValue]]) {
+        
+        [self.firstPW clear];
+        [self.secondPW clear];
+        [self toastResult:@"两次输入密码不一致"];
+        
+        return;
+    }
+    
+    if (self.firstPW.verify != 0) {
+        [self toastResult:@"请输入由字母数字组成的密码！"];
+        [self.firstPW clear];
+        [self.secondPW clear];
+        [self.firstPW becomeFirstResponder];
+        return;
+    }
+    
+    if (self.secondPW.verify != 0) {
+        [self toastResult:@"确认支付密码请输入由字母数字组成的密码！"];
+        [self.secondPW clear];
+        return;
+    }
+    
+    
+    //获取随机因子
+    [self getRandomKey];
+}
+#pragma mark -获取随机因子
+-(void) getRandomKey{
+    
+    //上行参数
+    NSDictionary *requestDict = [HisuntechBuildJsonString getRandomKeyJsonString];
+    //请求服务器 获取公钥
+    [self requestServer:requestDict requestType:APP_CODE_RandomKey codeType:4];
+}
+#pragma mark -请求服务器成功
+-(void)resquestSuccess:(id)response{
+    NSError *error;
+    NSData * dataResponse = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:&error];
+    NSDictionary *dictJson = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:&error];
+    //获取随机因子
+    if (codeType == 4) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            //得到服务器时间之后，进行登录
+            [HisuntechUserEntity Instance].loginPwd = [self.secondPW getValue:[NSString stringWithFormat:@"%@000",[dictJson objectForKey:@"SYSTM"]]];
+            HisuntechSettingPayPasswordViewController *sppvc = [[HisuntechSettingPayPasswordViewController alloc]init];
+            sppvc.sendMessagePhone = self.sendMessagePhone;
+            [self.navigationController pushViewController:sppvc animated:YES];
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+}
+/**
+ *  请求服务器失败
+ */
+-(void)resquestFail:(id)response{
+    if (codeType==4) {
+        [self toastResult:@"请检查您当前网络"];
+        return;
+    }
+}
+
+
+
+
+/**
+ *  限定输入长度不能大于16
+ */
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+	if (_firstPW == textField) {
+        if (range.location >= 16){
+			return NO; // return NO to not change text
+        }
+	}
+    if (_secondPW == textField) {
+        if (range.location >= 16){
+			return NO; // return NO to not change text
+        }
+	}
+    return YES;
+}
+
+- (void)dealloc
+{
+    [self.view endEditing:YES];
+    self.firstPW = nil;
+    self.secondPW = nil;
+}
+@end

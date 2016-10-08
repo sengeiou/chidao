@@ -1,0 +1,16 @@
+//
+//  PasswordKeyboardDelegate+VIP.h
+//  SA iSecurity Safety Input System for iOS
+//
+//  This file was created by Wang Xuesong on 14-1-12
+//
+//  Copyright 2012年,2013年,2014年 北京银盾思创网络技术有限公司. All rights reserved.
+//
+
+#import "PasswordKeyboardDelegate.h"
+
+@interface PasswordKeyboardDelegate (VIP)
+
+- (NSString*)getValueWithSalt:(NSString*)salt UsingFullMD5Value:(BOOL)flag;
+
+@end

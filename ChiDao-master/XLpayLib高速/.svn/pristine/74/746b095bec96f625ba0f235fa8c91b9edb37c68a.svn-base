@@ -1,0 +1,106 @@
+//
+//  iSecurityTypes.m
+//  SA iSecurity Safety Input System for iOS
+//
+//  This file was created by Wang Xuesong on 12-3-9
+//
+//  Copyright 2012年,2013年 北京银盾思创网络技术有限公司. All rights reserved.
+//
+
+#ifndef iSecurity_iSecurityTypes_h
+#define iSecurity_iSecurityTypes_h
+
+#define PasswordKeyboardViewWillRotateNotification @"PasswordKeyboardViewWillRotateNotification"
+#define PasswordKeyboardViewDidRotateNotification  @"PasswordKeyboardViewDidRotateNotification"
+
+#define PasswordChangedNotification    @"CCPasswordChangedNotification"
+#define kPasswordOldLength             @"kCCPasswordOldLength"
+#define kPasswordCurrentLength         @"kCCPasswordCurrentLength"
+#define kPasswordTextField             @"kCCPasswordTextField"
+
+#define InvalidPasswordNotification    @"CCInvalidPasswordNotification"
+#define kKeyboardDelegate              @"kCCKeyboardDelegate"
+
+#define LANDSCAPE_FRAME_HD  (CGRectMake(0, 0, 1024, 351))
+#define PORTRAIT_FRAME_HD   (CGRectMake(0, 0, 768, 263))
+
+#define PORTRAIT_FRAME      (CGRectMake(0, 0, 320, 216))
+#define LANDSCAPE_FRAME     (CGRectMake(0, 0, 480, 161))
+
+#define V_OK                                0
+#define V_ERROR_EMPTY                       -1
+#define V_ERROR_TOO_SHORT                   -2
+#define V_ERROR_NOT_ACCEPT                  -3
+#define V_ERROR_SIMPLE_PASSWORD             -4
+#define V_ERROR_DICTIONARY_PASSWORD         -5
+#define V_ERROR_TYPE_NO_MATCH               -6
+#define V_ERROR_UNKNOWN                     -10
+#define V_ERROR_INIT_VALIDATOR              -11
+
+#define V_DICTIONARY_SEPARATOR              ','
+
+#define V_CONTENTTYPE_ANY                   0x00000000
+#define V_CONTENTTYPE_NUM                   0x00000001
+#define V_CONTENTTYPE_LETTER                0x00000002
+#define V_CONTENTTYPE_PUNCT                 0x00000004
+
+/**********************************************************
+ *
+ * 在iPhone和Touch上，按键行为定义
+ * TouchKeyTypeAuto               //放大的按键在未越狱环境弹起，
+ *                                //越狱环境不弹起
+ * TouchKeyTypeAlways             //放大的按键总是弹起
+ * TouchKeyTypeNone               //放大的按键永不弹起
+ *
+ *********************************************************/
+typedef enum {
+    TouchKeyTypeAuto,
+    TouchKeyTypeAlways,
+    TouchKeyTypeNone
+} TouchKeyType;
+
+/**********************************************************
+ *
+ * KeyboardTypeLowerCaseLetter     //小写字母键盘
+ * KeyboardTypeCapitalLetter       //大写字母键盘
+ * KeyboardTypeNumber              //数字键盘
+ * KeyboardTypeSymbol              //符号键盘
+ * KeyboardTypePinNumber           //用来输入纯数字的iPhone键盘
+ *
+ *********************************************************/
+typedef enum {
+    KeyboardTypeLowerCaseLetter,
+    KeyboardTypeCapitalLetter,
+    KeyboardTypeNumber,
+    KeyboardTypeSymbol,
+    KeyboardTypePinNumber
+} KeyboardType;
+
+
+typedef enum {
+    //Common Environment
+    Product = 0,
+    Test,
+    Development,
+    
+    //OLP
+    OLP_Product_1024 = 10,
+    OLP_Product_2048,
+    OLP_Test,
+    OLP_Development
+} WorkMode;
+
+@protocol KeyboardDelegate <NSObject>
+@optional
+@property (nonatomic, assign) TouchKeyType touchKeyType;
+
+@required
+- (void)appendCharacter:(unichar)aChar;
+- (void)backspace;
+- (void)enter;
+- (NSUInteger)textLength;
+- (void)clear;
+- (void)reloadKeyboard;
+@end
+
+#endif

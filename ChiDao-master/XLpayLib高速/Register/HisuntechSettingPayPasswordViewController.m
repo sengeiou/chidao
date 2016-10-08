@@ -1,0 +1,394 @@
+//
+//  SettingPayPasswordViewController.m
+//  HisunPay
+//
+//  Created by scofield on 14-11-3.
+//  Copyright (c) 2014年 com.hisuntech. All rights reserved.
+//
+
+#import "HisuntechSettingPayPasswordViewController.h"
+#import "HisuntechNormalTextField.h"
+#import "HisuntechTableViewWithBlock.h"
+#import "iProtect.h"
+#import "HisuntechIdCardViewController.h"
+#import "HisuntechMixPayViewController.h"
+#import "HisuntechUIColor+YUColor.h"
+@interface HisuntechSettingPayPasswordViewController ()<UITextFieldDelegate>
+{
+    NSString *_loginPassword;
+    NSString *_payPassword;
+}
+@property (nonatomic,strong) PasswordTextField *firstPW;
+@property (nonatomic,strong) PasswordTextField *secondPW;
+@property (nonatomic,strong) UILabel *securityQuestion;
+@property (nonatomic,strong) UITextField *securityAnswer;
+
+@property (nonatomic,strong) HisuntechTableViewWithBlock *blockTab;
+@property (nonatomic,strong) NSMutableArray *tableDate;
+@property (nonatomic,assign) BOOL isOpened;
+@property (nonatomic,strong) UIButton *openButton;
+
+
+@end
+
+@implementation HisuntechSettingPayPasswordViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setLeftItemToBack];
+    self.title = @"设置支付密码";
+    self.navigationController.navigationBarHidden = NO;
+    
+    // 18+64
+    UILabel *requsetLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 10+64, screenWidth, 30)];
+    requsetLabel.textColor = kColor(112, 117, 120, 1);
+    requsetLabel.font = [UIFont boldSystemFontOfSize:13];
+    requsetLabel.text = @"       请输入6位数字的支付密码";
+    [self.view addSubview:requsetLabel];
+    
+    
+    self.view.backgroundColor = registerViewBackgroundColor;
+    self.firstPW = [[PasswordTextField alloc]initWithFrame:CGRectMake(0,requsetLabel.frame.origin.y + requsetLabel.frame.size.height + 3 ,screenWidth , 50)usingPasswordKeyboard:YES];
+    self.firstPW.kbdType = KeyboardTypePinNumber;
+    self.firstPW.maxLength = 6;
+    self.firstPW.kbdRandom = YES;
+    self.firstPW.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.firstPW.backgroundColor = [UIColor whiteColor];
+    self.firstPW.placeholder = @"  输入六位支付密码";
+    [self.view addSubview:self.firstPW];
+    
+
+    
+    self.secondPW = [[PasswordTextField alloc]initWithFrame:CGRectMake(0, self.firstPW.frame.size.height + self.firstPW.frame.origin.y + 3, screenWidth, 50) usingPasswordKeyboard:YES];
+    self.secondPW.backgroundColor = [UIColor whiteColor];
+    self.secondPW.kbdType = KeyboardTypePinNumber;
+    self.secondPW.placeholder = @"  确认支付密码";
+    self.secondPW.maxLength = 6;
+    self.secondPW.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.secondPW.encryptionPlatformPublicKey = [HisuntechUserEntity Instance].pubKey;
+    self.secondPW.kbdRandom = YES;
+    self.secondPW.encryptType = E_SDHS_DUAL_PLATFORM;
+    [self.view addSubview:self.secondPW];
+    
+    UILabel *warningLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.secondPW.frame.origin.y + self.secondPW.frame.size.height + 15, screenWidth, 30)];
+    warningLabel.text = @"      为了保证您成功修改支付密码，请预留安全问题";
+    warningLabel.textColor =  kColor(112, 117, 120, 1);
+    warningLabel.font = [UIFont boldSystemFontOfSize:13];
+    [self.view addSubview:warningLabel];
+    
+    self.securityQuestion =[[UILabel alloc]initWithFrame:CGRectMake(2, 0, screenWidth- 4, 50)];
+    self.securityQuestion.layer.borderWidth = 1;
+    self.securityQuestion.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.securityQuestion.userInteractionEnabled = NO;
+    self.securityQuestion.text = @"  我父亲的出生地";
+    UIButton *button =[UIButton buttonWithType:UIButtonTypeCustom];
+    
+    button.frame = CGRectMake(screenWidth - 50, 0, 50, 50);
+    button.backgroundColor = [UIColor lightGrayColor];
+    self.openButton = button;
+    NSString * imagePath = ResourcePath(@"pull_down_btn.png");
+    [self.openButton setImage:[UIImage imageWithContentsOfFile:imagePath] forState:UIControlStateNormal];
+    [self.openButton addTarget:self action:@selector(changeOpenStatus:) forControlEvents:UIControlEventTouchUpInside];
+    [self.securityQuestion addSubview:button];
+    [self.securityQuestion bringSubviewToFront:button];
+    
+    
+    
+    [self.securityQuestion setFont:[UIFont boldSystemFontOfSize:13]];
+    self.securityQuestion.userInteractionEnabled = YES;
+    self.securityQuestion.textColor = kColor(112, 117, 120, 1);
+    CGFloat y = warningLabel.frame.origin.y + warningLabel.frame.size.height;
+    CGRect frame = self.securityQuestion.frame;
+    frame.origin.y = y;
+    self.securityQuestion.frame = frame;
+    [self.view addSubview:self.securityQuestion];
+    
+    frame = self.securityQuestion.frame;
+    y = frame.size.height + frame.origin.y;
+    
+    self.blockTab = [[HisuntechTableViewWithBlock alloc]initWithFrame:CGRectMake(0, y, screenWidth, 0)];
+    [self.view addSubview:self.blockTab];
+    
+    _isOpened=NO;
+    //安全问题
+    _tableDate = [NSMutableArray arrayWithObjects:@"我父亲的出生地" ,@"我母亲的出生地",@"我的出生地",@"我的初中班主任",@"小学学校名字",@"高中死党名字",nil];
+    [self.blockTab initTableViewDataSourceAndDelegate:^(UITableView *tableView,NSInteger section){
+        NSInteger p = 6;
+        return p;
+    } setCellForIndexPathBlock:^(UITableView *tableView,NSIndexPath *indexPath){
+        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"ID"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ID"];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        }
+        [cell.textLabel setText:[_tableDate objectAtIndex:indexPath.row]];
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.shadowColor = [UIColor blackColor];
+        cell.textLabel.shadowOffset = CGSizeMake(-1, -1);
+        return cell;
+    } setDidSelectRowBlock:^(UITableView *tableView,NSIndexPath *indexPath){
+        UITableViewCell *cell=(UITableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+        self.securityQuestion.text=cell.textLabel.text;
+        [_openButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }];
+    [_blockTab.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [_blockTab.layer setBorderWidth:2];
+    
+    self.securityAnswer = [[HisuntechNormalTextField alloc]init];
+    self.securityAnswer.placeholder = @"输入答案";
+    frame = self.securityQuestion.frame;
+    frame.origin.y += frame.size.height + 10;
+    self.securityAnswer.frame = frame;
+    [self.view addSubview:self.securityAnswer];
+    
+    UIButton *submit = [UIButton buttonWithType:UIButtonTypeCustom];
+    [submit setTitle:@"下一步" forState:UIControlStateNormal];
+    [submit.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+//    imagePath = ResourcePath(@"login_btn_n.9.png");
+//    [submit setBackgroundImage:[UIImage imageWithContentsOfFile:imagePath] forState:UIControlStateNormal];
+    submit.backgroundColor = [UIColor colorWithHexString:@"#41b886" withAlpha:1];
+    submit.layer.cornerRadius = 4;
+    submit.clipsToBounds = YES;
+    [submit addTarget:self action:@selector(submitPasswordAndSecury) forControlEvents:UIControlEventTouchUpInside];
+    frame = self.securityAnswer.frame;
+    submit.frame = CGRectMake((screenWidth - 300)/2, frame.origin.y + 75, 300, 40);
+    [self.view addSubview:submit];
+}
+
+// 提交问题
+- (void)submitPasswordAndSecury
+{
+    if ([self.firstPW getLength]==0 || [self.secondPW getLength]==0) {
+        [self toastResult:@"输入内容不能为空"];
+        return;
+    }
+    if (([self.firstPW getLength]>0 && [self.firstPW getLength]<6) || ([self.secondPW getLength]>0 && [self.secondPW getLength]<6)) {
+        [self toastResult:@"密码长度不能小于6位"];
+        return;
+    }
+    if (![[self.secondPW getMeasureValue] isEqual:[self.firstPW getMeasureValue]]) {
+        
+        [self.secondPW clear];
+        [self.firstPW clear];
+        [self toastResult:@"两次密码输入不一致"];
+        return;
+    }
+    if (self.securityQuestion.text == nil||[@"" isEqual:self.securityQuestion.text]) {
+        [self toastResult:@"请选择安全问题"];
+        return;
+    }
+    if (self.securityAnswer.text == nil||[@"" isEqual:self.securityAnswer.text]) {
+        [self toastResult:@"请输入安全问题答案"];
+        return;
+    }
+    
+    [self getRandomKey];
+}
+
+#pragma mark -注册请求
+//注册 APP_CODE_UserRegister @"OAPPMCA1/APP4080020" 35
+//-(void)regesiterRequest
+//{
+//    NSDictionary *requestDict = [HisuntechBuildJsonString getRegisterJsonString:[HisuntechUserEntity Instance].userId
+//                                                              regEmail:@""
+//                                                              loginPwd:[HisuntechUserEntity Instance].loginPwd
+//                                                                payPwd:[HisuntechUserEntity Instance].payPwd
+//                                                                pswQue:self.securityQuestion.text
+//                                                                pswAns:self.securityAnswer.text
+//                                                               smsCode:[HisuntechUserEntity Instance].smsCode]
+//    
+//    ;
+//    [self requestServer:requestDict requestType:APP_CODE_UserRegister codeType:35];
+//}
+#pragma mark -获取随机因子
+-(void) getRandomKey{
+    
+    //上行参数
+    NSDictionary *requestDict = [HisuntechBuildJsonString getRandomKeyJsonString];
+    //请求服务器 获取公钥
+    [self requestServer:requestDict requestType:APP_CODE_RandomKey codeType:4];
+}
+// 安全问题展开与收缩
+- (void)changeOpenStatus:(id)sender {
+    
+    if (_isOpened) {
+        [UIView animateWithDuration:0.3 animations:^{
+            NSString * imagePath = ResourcePath(@"pull_down_btn.png");
+            UIImage *closeImage=[UIImage imageWithContentsOfFile:imagePath];
+            [_openButton setImage:closeImage forState:UIControlStateNormal];
+            
+            CGRect frame=_blockTab.frame;
+            
+            frame.size.height=0;
+            [_blockTab setFrame:frame];
+            
+        } completion:^(BOOL finished){
+            
+            _isOpened=NO;
+        }];
+    }else{
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            NSString * imagePath = ResourcePath(@"pull_up_btn.png");
+            UIImage *openImage=[UIImage imageWithContentsOfFile:imagePath];
+            [_openButton setImage:openImage forState:UIControlStateNormal];
+            
+            CGRect frame=_blockTab.frame;
+            
+            frame.size.height=160;
+            [_blockTab setFrame:frame];
+            [self.view bringSubviewToFront:self.blockTab];
+        } completion:^(BOOL finished){
+            _isOpened=YES;
+        }];
+    }
+}
+/**
+ *  限定输入长度不能大于16
+ */
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (_securityAnswer == textField) {
+        if (range.location >= 16){
+			return NO; // return NO to not change text
+        }
+	}
+    return YES;
+}
+/**
+ *  登录
+ */
+-(void)login{
+    NSDictionary *requestDict = [HisuntechBuildJsonString getLoginJsonString:[HisuntechUserEntity Instance].userId
+                                                              email:@""
+                                                                psw:[HisuntechUserEntity Instance].loginPwd];
+    //请求服务器 获取个人信息
+    [self requestServer:requestDict requestType:APP_CODE_UserLogin codeType:9];
+}
+
+/**
+ *  请求服务器成功
+ */
+-(void)resquestSuccess:(id)response{
+    
+    NSError *error;
+    NSData * dataResponse = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:&error];
+    NSDictionary *dictJson = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:&error];
+    //获取随机因子
+    if (codeType == 4) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            //得到服务器时间之后，进行登录
+            [HisuntechUserEntity Instance].payPwd = [self.secondPW getValue:[NSString stringWithFormat:@"%@000",[dictJson objectForKey:@"SYSTM"]]];
+            
+            HisuntechIdCardViewController *idCard = [[HisuntechIdCardViewController alloc] init];
+            
+            idCard.payPassWord =[self.secondPW getValue:[NSString stringWithFormat:@"%@000",[dictJson objectForKey:@"SYSTM"]]];
+            idCard.question = self.securityQuestion.text;
+            idCard.answer = self.securityAnswer.text;
+            idCard.sendMessagePhone = self.sendMessagePhone;
+            [self.navigationController pushViewController:idCard animated:YES];
+            
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+    //注册
+    if (codeType==35) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            [self login];//登录
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+    //登录
+    if (codeType==9) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            [HisuntechUserEntity Instance].serverTime = [dictJson objectForKey:@"SERTM"];//服务器时间
+            [HisuntechUserEntity Instance].drwBal = [dictJson objectForKey:@"DRW_BAL"];//账户余额
+            [HisuntechUserEntity Instance].userNm = [dictJson objectForKey:@"USRCNM"];//用户真实姓名
+            [HisuntechUserEntity Instance].userId = [dictJson objectForKey:@"MBLNO"];//用户手机号
+            [HisuntechUserEntity Instance].relFlg = [dictJson objectForKey:@"RELFLG"];//实名认证状态
+            [HisuntechUserEntity Instance].userNo = [dictJson objectForKey:@"USRNO"];//内部用户号
+            [HisuntechUserEntity Instance].changeDate = [dictJson objectForKey:@"MAX_CHARGE_DT"];//资金变动时间
+            
+            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+            [def setObject:[HisuntechUserEntity Instance].userNo forKey:@"USRNO"];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            NSDictionary *user = @{@"user":[HisuntechUserEntity Instance].userId};
+            NSUserDefaults *users = [NSUserDefaults standardUserDefaults];
+            [users setObject:user forKey:@"users"];
+            [users synchronize];
+            
+            
+            HisuntechMixPayViewController *mixPayViewController = [[HisuntechMixPayViewController alloc] init];
+            mixPayViewController.dic = @{
+                                         @"SERTM": [HisuntechUserEntity Instance].serverTime,
+                                         @"DRW_BAL":[HisuntechUserEntity Instance].drwBal,
+                                         @"USRCNM":[HisuntechUserEntity Instance].userNm,
+                                         @"MBLNO":[HisuntechUserEntity Instance].userId,
+                                         @"RELFLG":[HisuntechUserEntity Instance].relFlg,
+                                         @"USRNO":[HisuntechUserEntity Instance].userNo,
+                                         @"MAX_CHARGE_DT":[HisuntechUserEntity Instance].changeDate,
+                                         @"USRID":[HisuntechUserEntity Instance].userId
+                                         };
+            
+            [self.navigationController pushViewController:mixPayViewController animated:NO];
+            
+//            IdCardViewController * ivc = [[IdCardViewController alloc]init];
+//            [self.navigationController pushViewController:ivc animated:YES];
+
+            [self toastResult:@"恭喜您！注册成功"];
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+}
+
+/**
+ *  请求服务器失败
+ */
+-(void)resquestFail:(id)response{
+    if (codeType==35||codeType==9) {
+        [self toastResult:@"请检查您当前网络"];
+        return;
+    }
+}
+
+
+- (void)dealloc
+{
+    self.firstPW = nil;
+    self.secondPW = nil;
+    self.securityAnswer = nil;
+    self.securityQuestion = nil;
+    self.blockTab = nil;
+    self.tableDate = nil;
+    self.openButton = nil;
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

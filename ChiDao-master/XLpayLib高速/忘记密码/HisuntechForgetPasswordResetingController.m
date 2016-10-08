@@ -1,0 +1,253 @@
+//
+//  ForgetPasswordResetingController.m
+//  HisunPay
+//
+//  Created by scofield on 14-11-14.
+//  Copyright (c) 2014年 com.hisuntech. All rights reserved.
+//
+
+#import "HisuntechForgetPasswordResetingController.h"
+#import "HisuntechLoginController.h"
+#import "iProtect.h"
+#import "HisuntechUIColor+YUColor.h"
+@interface HisuntechForgetPasswordResetingController ()<UITextFieldDelegate>
+{
+    NSString *_loginPassword;
+}
+
+@property(nonatomic,retain) PasswordTextField *password;
+@property(nonatomic,retain) PasswordTextField *passwordRepeat;
+@property(nonatomic,retain) UIButton *commitBtn;
+@property(nonatomic,copy) NSString *titleName;
+@property (nonatomic,strong) UILabel *headerLabel;
+
+@end
+
+@implementation HisuntechForgetPasswordResetingController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.navigationController.navigationBarHidden = NO;
+    self.view.backgroundColor = registerViewBackgroundColor;
+    self.title = @"重置登录密码";
+    [self setLeftItemToBack];
+    [self createUI];
+    ;
+   
+   
+}
+
+-(void)createUI
+{
+    UILabel *headerLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 64+10, 300, 30)];
+    headerLab.text = @"登录密码由8-16位英文字母、数字组成";
+    headerLab.textColor = [UIColor lightGrayColor];
+    headerLab.font =[UIFont systemFontOfSize:13];
+    [self.view addSubview:headerLab];
+    self.headerLabel = headerLab;
+    
+    UIView *passwordView = [[UIView alloc]initWithFrame:CGRectMake(0, 64+50, [UIScreen mainScreen].bounds.size.width, 50)];
+    passwordView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:passwordView];
+    
+    self.password = [[PasswordTextField alloc]initWithFrame:CGRectMake(10, 0, 300, 50)usingPasswordKeyboard:YES];
+    self.password.placeholder = @"请输入登录密码";
+    self.password.accepts = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]+$";
+    self.password.delegate = self;
+    self.password.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.password.encryptionPlatformPublicKey = [HisuntechUserEntity Instance].pubKey;
+    self.password.kbdRandom = YES;
+    self.password.encryptType = E_SDHS_DUAL_PLATFORM;
+    [passwordView addSubview:self.password];
+    
+    UIView *resetView = [[UIView alloc]initWithFrame:CGRectMake(0, 120 + 64, [UIScreen mainScreen].bounds.size.width, 50)];
+    resetView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:resetView];
+    
+    self.passwordRepeat = [[PasswordTextField alloc]initWithFrame:CGRectMake(10, 0, 300, 50)];
+    self.passwordRepeat.placeholder = @"请确认登录密码";
+    self.passwordRepeat.encryptionPlatformPublicKey = [HisuntechUserEntity Instance].pubKey;
+    self.passwordRepeat.kbdRandom = YES;
+    self.passwordRepeat.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.passwordRepeat.accepts = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]+$";
+    self.passwordRepeat.delegate = self;
+    self.passwordRepeat.encryptType = E_SDHS_DUAL_PLATFORM;
+    [resetView addSubview:self.passwordRepeat];
+    
+    self.commitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.commitBtn.frame = CGRectMake(20, 220  +64, 280, 36);
+//    NSString * imagePath = ResourcePath(@"login_btn_n.9.png");
+//    [self.commitBtn setBackgroundImage:[UIImage imageWithContentsOfFile:imagePath] forState:UIControlStateNormal];
+    [self.commitBtn setBackgroundColor:[UIColor colorWithHexString:@"#41b886" withAlpha:1]];
+    self.commitBtn.layer.cornerRadius = 3;
+    self.commitBtn.clipsToBounds = YES;
+     [self.commitBtn addTarget:self action:@selector(resettingLoginPassword) forControlEvents:UIControlEventTouchUpInside];
+    [self.commitBtn setTitle:@"提交" forState:UIControlStateNormal];
+    [self.view addSubview:self.commitBtn];
+}
+/**
+ *  获取公钥
+ */
+-(void)getPublicKey{
+    //上行参数
+    NSDictionary *requestDict = [HisuntechBuildJsonString getPublicKeyJsonString];
+    //请求服务器 获取公钥
+    [self requestServer:requestDict requestType:APP_CODE_PublicKey codeType:1];
+}
+#pragma mark -获取随机因子
+-(void) getRandomKey{
+    //上行参数
+    NSDictionary *requestDict = [HisuntechBuildJsonString getRandomKeyJsonString];
+    //请求服务器 获取公钥
+    [self requestServer:requestDict requestType:APP_CODE_RandomKey codeType:4];
+}
+- (void)resettingLoginPassword
+{
+    if ([self.password getLength] == 0 ) {
+        [self toastResult:@"请输入登录密码"];
+        return;
+    }
+    if (([self.password getLength]>0)&&([self.password getLength]<8)) {
+        [self toastResult:@"登录密码长度不能小于8位"];
+        return;
+    }
+    if ([self.passwordRepeat getLength] == 0) {
+        [self toastResult:@"请确认新的登录密码"];
+        return;
+    }
+    if (([self.passwordRepeat getLength]>0)&&([self.passwordRepeat getLength]<8)) {
+        [self toastResult:@"密码长度不能小于8位"];
+        return;
+    }
+    
+    if ([[self.passwordRepeat getMeasureValue] isEqual:[self.password getMeasureValue]] == NO) {
+        [self.passwordRepeat clear];
+        [self.password clear];
+        [self toastResult:@"两次输入的密码不一致"];
+        return;
+    }
+    if (self.password.verify != 0) {
+        [self toastResult:@"请输入由字母数字组成的密码！"];
+        [self.password clear];
+        [self.passwordRepeat clear];
+        return;
+    }
+    
+    if (self.passwordRepeat.verify != 0) {
+        [self toastResult:@"请输入由字母数字组成的密码！"];
+        [self.passwordRepeat clear];
+        return;
+    }
+    
+    
+    if ([HisuntechUserEntity Instance].pubKey == nil || [[HisuntechUserEntity Instance].pubKey isEqualToString:@""]) {
+        [self getPublicKey];
+        return;
+    }else{
+         [self getRandomKey];
+    }
+   
+}
+#pragma  mark -重置登录密码
+- (void)reSetPasswordRequest
+{
+    
+    NSDictionary *para = [HisuntechBuildJsonString getResetLoginPwdMsgJsonString:self.phoneNumber.text regEmail:@"" novLoginPwd:_loginPassword];
+    [self requestServer:para requestType:APP_CODE_ResetLoginPwd successSel:@selector(updateLoginPwdBack:) failureSel:@selector(failure:)];
+}
+/**
+ *  请求服务器成功
+ */
+-(void)resquestSuccess:(id)response{
+    NSError *error;
+    NSData * dataResponse = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:&error];
+    NSDictionary *dictJson = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:&error];
+    //获取公钥
+    if (codeType==1) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            NSString *newPub = [dictJson objectForKey:@"PUBKEY"];
+            [[NSUserDefaults standardUserDefaults]setObject:[dictJson objectForKey:@"PUBKEY"] forKey:@"PUBKEY"];
+            NSString *oldPub = [[NSUserDefaults standardUserDefaults]objectForKey:@"PUBKEY"];
+            if ([newPub isEqualToString:oldPub]) {
+                
+            }else{
+                [[NSUserDefaults standardUserDefaults]setObject:[dictJson objectForKey:@"PUBKEY"] forKey:@"PUBKEY"];
+                [[NSUserDefaults standardUserDefaults]synchronize];
+            }
+            [HisuntechUserEntity Instance].pubKey = [dictJson objectForKey:@"PUBKEY"];
+            self.passwordRepeat.encryptionPlatformPublicKey = [HisuntechUserEntity Instance].pubKey;
+            [self getRandomKey];
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+    //获取随机因子
+    if (codeType == 4) {
+        if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"] ] ) {
+            //得到服务器时间之后，进行登录
+            _loginPassword = [self.passwordRepeat getValue:[NSString stringWithFormat:@"%@000",[dictJson objectForKey:@"SYSTM"]]];
+            [self reSetPasswordRequest];
+        }else{
+            [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+        }
+        return;
+    }
+
+}
+- (void)updateLoginPwdBack:(id)response
+{
+    NSError *error;
+    NSData * dataResponse = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:&error];
+    NSDictionary *dictJson = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:&error];
+    
+    if ([@"MCA00000" isEqual:[dictJson objectForKey:@"RSP_CD"]]) {
+        
+        //重置密码 成功 后 把手机号 存 单利
+        
+        [HisuntechUserEntity Instance].userId = self.phoneNumber.text;
+        
+        [self toastResult:@"重置密码成功"];
+    }else{
+        [self toastResult:[dictJson objectForKey:@"RSP_MSG"]];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView.title isEqualToString:@"重置密码成功"]) {
+        
+        
+        for (id temp in self.navigationController.viewControllers) {
+            if ([temp isKindOfClass:[HisuntechLoginController class]]) {
+                int index = (int)[self.navigationController.viewControllers indexOfObject:temp];
+                [self.navigationController popToViewController:self.navigationController.viewControllers[index] animated:YES];
+            }
+        }
+        
+        
+//        HisuntechLoginController *lg = (HisuntechLoginController *)self.navigationController.viewControllers[1];
+//        [lg setLeftItemToBack];
+    }
+}
+
+- (void)failure:(NSError *)error
+{
+    [self toastResult:@"请检查网路"];
+}
+
+
+
+
+@end

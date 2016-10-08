@@ -1,0 +1,17 @@
+//
+//  resetPasswordController.h
+//  HisunPay
+//
+//  Created by 王鑫 on 14-11-3.
+//  Copyright (c) 2014年 com.hisuntech. All rights reserved.
+//
+
+#import "HisuntechBaseViewController.h"
+#import "iSecurity.h"
+@interface resetPasswordController : HisuntechBaseViewController<UITextFieldDelegate>
+@property(nonatomic,retain) PasswordTextField *password;
+@property(nonatomic,retain) PasswordTextField *passwordRepeat;
+@property(nonatomic,retain) UIButton *commitBtn;
+@property(nonatomic,copy) NSString *titleName;
+@property (nonatomic,strong) UILabel *headerLabel;
+@end
